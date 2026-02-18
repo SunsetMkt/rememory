@@ -12,10 +12,10 @@
   <div id="toast-container" class="toast-container" role="alert" aria-live="polite"></div>
 
   <!-- QR Scanner modal -->
-  <div id="qr-scanner-modal" class="qr-scanner-modal hidden">
+  <div id="qr-scanner-modal" class="qr-scanner-modal hidden" role="dialog" aria-modal="true" aria-label="QR code scanner">
     <div class="qr-scanner-header">
       <span data-i18n="scan_title">Scan a QR code</span>
-      <button id="qr-scanner-close" class="qr-scanner-close">&times;</button>
+      <button id="qr-scanner-close" class="qr-scanner-close" aria-label="Close">&times;</button>
     </div>
     <div class="qr-scanner-body">
       <video id="qr-video" autoplay playsinline></video>
@@ -38,7 +38,7 @@
       <div class="nav-links hidden" id="nav-links-bundle">
         <a href="https://eljojo.github.io/rememory/docs" target="_blank" data-i18n="nav_guide">Guide</a>
       </div>
-      <select class="lang-select" id="lang-select">
+      <select class="lang-select" id="lang-select" aria-label="Language">
         {{LANG_OPTIONS}}
       </select>
     </nav>
@@ -52,7 +52,7 @@
     <!-- Step 1: Collect Shares -->
     <div class="card">
       <h2><span class="step-number">1</span> <span data-i18n="step1_title">Gather the pieces</span></h2>
-      <div id="share-drop-zone" class="drop-zone">
+      <div id="share-drop-zone" class="drop-zone" tabindex="0" aria-label="Share file drop zone">
         <p data-i18n="step1_drop">Drop README.txt files here, or click to choose them</p>
         <small data-i18n="step1_hint">Each file holds one person's piece</small>
       </div>
@@ -86,7 +86,7 @@
     <!-- Step 2: Load Manifest -->
     <div class="card">
       <h2><span class="step-number">2</span> <span data-i18n="step2_title">Add the encrypted archive</span></h2>
-      <div id="manifest-drop-zone" class="drop-zone">
+      <div id="manifest-drop-zone" class="drop-zone" tabindex="0" aria-label="Encrypted archive drop zone">
         <p data-i18n="step2_drop">Drop a recover.html or MANIFEST.age here, or click to choose it</p>
         <small data-i18n="step2_hint">Use a recover.html from any friend's bundle, or the MANIFEST.age file</small>
       </div>
@@ -115,7 +115,7 @@
           <div class="fill" style="width: 0%"></div>
         </div>
 
-        <p id="status-message" class="status-message"></p>
+        <p id="status-message" class="status-message" aria-live="polite"></p>
 
         <div id="files-list" class="files-list"></div>
 

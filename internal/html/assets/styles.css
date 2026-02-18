@@ -4,7 +4,7 @@
   --paper-light: #ffffff;
   --text: #2E2A26;
   --text-secondary: #6B6560;
-  --text-muted: #8A8480;
+  --text-muted: #766E6A;
   --sage: #55735A;
   --sage-dark: #466B4A;
   --sage-light: #E8F2EA;
@@ -35,6 +35,12 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--sage);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(85, 115, 90, 0.2);
 }
 
 body {
@@ -425,6 +431,7 @@ footer a:hover {
 .paste-area textarea:focus {
   outline: none;
   border-color: var(--sage);
+  box-shadow: 0 0 0 2px rgba(85, 115, 90, 0.2);
 }
 
 /* Step 1 content collapse when threshold is met */
@@ -666,6 +673,13 @@ footer a:hover {
   width: 20px;
   height: 20px;
   fill: currentColor;
+}
+
+/* Focus ring override for dark backgrounds */
+.about-section :focus-visible,
+.qr-scanner-modal :focus-visible {
+  outline-color: var(--paper-light);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.3);
 }
 
 /* Import/details sections */
