@@ -267,12 +267,7 @@ func runInit(cmd *cobra.Command, args []string) error {
 	}
 
 	// Write the manifest README template
-	templateData := project.TemplateData{
-		ProjectName: name,
-		Friends:     friends,
-		Threshold:   threshold,
-	}
-	if err := project.WriteManifestReadme(p.ManifestPath(), templateData); err != nil {
+	if err := project.WriteManifestReadme(p.ManifestPath(), project.TemplateDataFromProject(p)); err != nil {
 		return fmt.Errorf("creating manifest README: %w", err)
 	}
 

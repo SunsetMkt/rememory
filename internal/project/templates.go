@@ -21,23 +21,36 @@ type TemplateData struct {
 
 // WriteManifestReadme creates the README.md file in the manifest directory.
 func WriteManifestReadme(manifestDir string, data TemplateData) error {
+	content, err := RenderManifestReadme(data)
+	if err != nil {
+		return err
+	}
+	return os.WriteFile(filepath.Join(manifestDir, "README.md"), content, 0644)
+}
+
+// TemplateDataFromProject builds TemplateData from a Project.
+func TemplateDataFromProject(p *Project) TemplateData {
+	return TemplateData{
+		ProjectName: p.Name,
+		Friends:     p.Friends,
+		Threshold:   p.Threshold,
+	}
+}
+
+// RenderManifestReadme renders the manifest README template to bytes.
+// Used at seal time to detect an untouched template.
+func RenderManifestReadme(data TemplateData) ([]byte, error) {
 	tmpl, err := template.New("readme").Parse(manifestReadmeTemplate)
 	if err != nil {
-		return fmt.Errorf("parsing template: %w", err)
+		return nil, fmt.Errorf("parsing template: %w", err)
 	}
 
-	path := filepath.Join(manifestDir, "README.md")
-	f, err := os.Create(path)
-	if err != nil {
-		return fmt.Errorf("creating README.md: %w", err)
-	}
-	defer f.Close()
-
-	if err := tmpl.Execute(f, data); err != nil {
-		return fmt.Errorf("executing template: %w", err)
+	var buf strings.Builder
+	if err := tmpl.Execute(&buf, data); err != nil {
+		return nil, fmt.Errorf("executing template: %w", err)
 	}
 
-	return nil
+	return []byte(buf.String()), nil
 }
 
 // FriendNames returns a comma-separated list of friend names.

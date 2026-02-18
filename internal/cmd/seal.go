@@ -90,6 +90,26 @@ func sealProject(p *project.Project, recoveryURL string, noEmbedManifest bool) e
 		return fmt.Errorf("manifest directory is empty: %s", manifestDir)
 	}
 
+	// Detect untouched template: exactly one file in the manifest tree,
+	// a README.md exists at the root, and its contents match the rendered template.
+	if fileCount == 1 {
+		readmePath := filepath.Join(manifestDir, "README.md")
+		actual, err := os.ReadFile(readmePath)
+		if err != nil && !os.IsNotExist(err) {
+			return fmt.Errorf("reading manifest file: %w", err)
+		}
+		if err == nil {
+			td := project.TemplateDataFromProject(p)
+			expected, err := project.RenderManifestReadme(td)
+			if err != nil {
+				return fmt.Errorf("rendering manifest template: %w", err)
+			}
+			if bytes.Equal(actual, expected) {
+				return fmt.Errorf("manifest contains only the template README — add your files to %s before sealing", manifestDir)
+			}
+		}
+	}
+
 	dirSize, err := manifest.DirSize(manifestDir)
 	if err != nil {
 		return fmt.Errorf("calculating manifest size: %w", err)
