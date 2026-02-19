@@ -2,6 +2,8 @@ package html
 
 import (
 	"strings"
+
+	"github.com/eljojo/rememory/internal/core"
 )
 
 // GenerateIndexHTML creates the landing page HTML with embedded CSS.
@@ -16,8 +18,10 @@ func GenerateIndexHTML(version, githubURL string) string {
 	// Embed dataflow animation
 	html = strings.Replace(html, "{{DATAFLOW_JS}}", dataflowJS, 1)
 
-	// Replace version and GitHub URL
+	// Replace version and GitHub URLs
 	html = strings.Replace(html, "{{VERSION}}", version, -1)
+	html = strings.Replace(html, "{{GITHUB_REPO}}", core.GitHubRepo, -1)
+	html = strings.Replace(html, "{{GITHUB_PAGES}}", core.GitHubPages, -1)
 	html = strings.Replace(html, "{{GITHUB_URL}}", githubURL, -1)
 
 	return html

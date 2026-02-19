@@ -3,6 +3,7 @@ package html
 import (
 	"strings"
 
+	"github.com/eljojo/rememory/internal/core"
 	"github.com/eljojo/rememory/internal/translations"
 )
 
@@ -34,8 +35,10 @@ func GenerateMakerHTML(createWASMBytes []byte, version, githubURL string) string
 	createWASMB64 := compressAndEncode(createWASMBytes)
 	html = strings.Replace(html, "{{WASM_BASE64}}", createWASMB64, 1)
 
-	// Replace version and GitHub URL
+	// Replace version and GitHub URLs
 	html = strings.Replace(html, "{{VERSION}}", version, -1)
+	html = strings.Replace(html, "{{GITHUB_REPO}}", core.GitHubRepo, -1)
+	html = strings.Replace(html, "{{GITHUB_PAGES}}", core.GitHubPages, -1)
 	html = strings.Replace(html, "{{GITHUB_URL}}", githubURL, -1)
 
 	// Apply CSP nonce to all script tags

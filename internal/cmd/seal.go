@@ -237,7 +237,7 @@ func sealProject(p *project.Project, recoveryURL string, noEmbedManifest bool) e
 
 	cfg := bundle.Config{
 		Version:          version,
-		GitHubReleaseURL: fmt.Sprintf("https://github.com/eljojo/rememory/releases/tag/%s", version),
+		GitHubReleaseURL: fmt.Sprintf("%s/releases/tag/%s", core.GitHubRepo, version),
 		RecoveryURL:      recoveryURL,
 		NoEmbedManifest:  noEmbedManifest,
 	}

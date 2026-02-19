@@ -4,6 +4,10 @@ All notable changes to ReMemory are documented here.
 
 ## Unreleased
 
+## v0.0.14 — 2026-02-19
+
+- **Improved Docs**: improve guides on the website. Also updated demo bundles so it contains 5 friends instead of 3.
+
 ## v0.0.13 — 2026-02-18
 
 - **Simpler recovery tool** — The recovery tool (`recover.html`) no longer relies on WebAssembly. It now uses plain JavaScript, making it smaller, faster to load, and more likely to work in browsers for decades to come. The CLI and bundle creation still use Go, but recovery — the part your friends will use — is now built on simpler, more universal technology.
@@ -23,7 +27,7 @@ All notable changes to ReMemory are documented here.
 - **Portuguese translations** — Added Portuguese as a sixth supported language.
 - **Language picker** — Both the recovery tool and maker now have a language switcher, so people can choose their language themselves.
 - **Named and anonymous toggle in maker** — The maker UI now has a clear selector for choosing between named and anonymous bundles, instead of burying the option.
-- **Security hardening** — Added Content Security Policy headers to prevent XSS. Added size limits to ZIP extraction in the browser path (thanks @vnykmshr). Applied additional safety validations from a [security audit](docs/security-audit.md).
+- **Security hardening** — Added Content Security Policy headers to prevent XSS. Added size limits to ZIP extraction in the browser path (thanks @vnykmshr). Applied additional safety validations from a [security review](docs/security-review.md).
 - **PDF polish** — Updated colours to better match the palette, added a coloured identity bar, and tweaked the header layout.
 
 ## v0.0.11 — 2026-02-11

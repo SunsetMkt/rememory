@@ -7,6 +7,7 @@ import (
 	"encoding/json"
 	"strings"
 
+	"github.com/eljojo/rememory/internal/core"
 	"github.com/eljojo/rememory/internal/translations"
 )
 
@@ -58,9 +59,11 @@ func GenerateRecoverHTML(version, githubURL string, personalization *Personaliza
 	// Embed shared.js + app.js (native crypto bundled in app.js)
 	html = strings.Replace(html, "{{APP_JS}}", sharedJS+"\n"+appJS, 1)
 
-	// Replace version and GitHub URL
-	html = strings.Replace(html, "{{VERSION}}", version, 1)
-	html = strings.Replace(html, "{{GITHUB_URL}}", githubURL, 1)
+	// Replace version and GitHub URLs
+	html = strings.Replace(html, "{{VERSION}}", version, -1)
+	html = strings.Replace(html, "{{GITHUB_REPO}}", core.GitHubRepo, -1)
+	html = strings.Replace(html, "{{GITHUB_PAGES}}", core.GitHubPages, -1)
+	html = strings.Replace(html, "{{GITHUB_URL}}", githubURL, -1)
 
 	// Embed personalization data as JSON (or null if not provided)
 	var personalizationJSON string

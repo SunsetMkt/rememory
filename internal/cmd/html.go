@@ -5,6 +5,7 @@ import (
 	"os"
 	"strings"
 
+	"github.com/eljojo/rememory/internal/core"
 	"github.com/eljojo/rememory/internal/html"
 	"github.com/spf13/cobra"
 )
@@ -46,9 +47,9 @@ func runHTML(cmd *cobra.Command, args []string) error {
 	// Use specific release URL if version is a tag, otherwise use latest
 	var githubURL string
 	if strings.HasPrefix(version, "v") {
-		githubURL = fmt.Sprintf("https://github.com/eljojo/rememory/releases/tag/%s", version)
+		githubURL = fmt.Sprintf("%s/releases/tag/%s", core.GitHubRepo, version)
 	} else {
-		githubURL = "https://github.com/eljojo/rememory/releases/latest"
+		githubURL = core.GitHubRepo + "/releases/latest"
 	}
 
 	switch subcommand {

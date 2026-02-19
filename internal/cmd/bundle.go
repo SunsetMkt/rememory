@@ -66,7 +66,7 @@ func runBundle(cmd *cobra.Command, args []string) error {
 
 	cfg := bundle.Config{
 		Version:          version,
-		GitHubReleaseURL: fmt.Sprintf("https://github.com/eljojo/rememory/releases/tag/%s", version),
+		GitHubReleaseURL: fmt.Sprintf("%s/releases/tag/%s", core.GitHubRepo, version),
 		RecoveryURL:      recoveryURL,
 		NoEmbedManifest:  noEmbedManifest,
 	}

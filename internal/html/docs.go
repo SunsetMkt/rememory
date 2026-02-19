@@ -2,6 +2,8 @@ package html
 
 import (
 	"strings"
+
+	"github.com/eljojo/rememory/internal/core"
 )
 
 // GenerateDocsHTML creates the documentation page HTML with embedded CSS.
@@ -13,8 +15,10 @@ func GenerateDocsHTML(version, githubURL string) string {
 	// Embed styles
 	html = strings.Replace(html, "{{STYLES}}", stylesCSS, 1)
 
-	// Replace version and GitHub URL
+	// Replace version and GitHub URLs
 	html = strings.Replace(html, "{{VERSION}}", version, -1)
+	html = strings.Replace(html, "{{GITHUB_REPO}}", core.GitHubRepo, -1)
+	html = strings.Replace(html, "{{GITHUB_PAGES}}", core.GitHubPages, -1)
 	html = strings.Replace(html, "{{GITHUB_URL}}", githubURL, -1)
 
 	return html

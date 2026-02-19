@@ -14,25 +14,29 @@ Each person receives a bundle containing `recover.html` — a browser-based reco
 graph TB
     subgraph seal["① SEAL (you do this once)"]
         A[Your Files] --> B[Encrypt with age]
-        B --> C[Split key into 3 shares]
+        B --> C[Split key into 5 pieces]
         C --> D1[Alice's bundle]
         C --> D2[Bob's bundle]
-        C --> D3[Carol's bundle]
+        C --> D3[Camila's bundle]
+        C --> D4[Dominique's bundle]
+        C --> D5[Elias's bundle]
     end
 
     subgraph recover["② RECOVER (friends do this together)"]
-        R1[Alice opens recover.html] --> R2[Her share is pre-loaded]
-        R2 --> R3[Adds Bob's share]
-        R3 --> R5{2 of 3 shares}
+        R1[Alice opens recover.html] --> R2[Her piece is pre-loaded]
+        R2 --> R3[Drags Bob's file]
+        R3 --> R4[Drags Camila's file]
+        R4 --> R5{3 of 5 pieces}
         R5 -->|Threshold met| R6[Files unlocked]
         R6 --> R7[Download files]
     end
 
     D1 -.-> R1
     D2 -.-> R3
+    D3 -.-> R4
 ```
 
-Any 2 shares can reconstruct the key, but a single share reveals nothing — not "very little," mathematically zero information.
+Any 3 pieces can reconstruct the key, but a single piece reveals nothing — not "very little," mathematically zero information.
 
 The number of people and the threshold are up to you: 2-of-3 for a small circle, 3-of-5 for a wider group, or 2-of-2 for a couple.
 
@@ -159,7 +163,7 @@ ReMemory does NOT rely on:
 - Any long-term availability of this project
 - The internet during recovery
 
-See the **[Security Audit](docs/security-audit.md)** for details.
+See the **[Security Review](docs/security-review.md)** for details.
 
 </details>
 

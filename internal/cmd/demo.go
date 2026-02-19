@@ -17,11 +17,11 @@ var demoCmd = &cobra.Command{
 This is useful for testing the recovery workflow or demonstrating ReMemory.
 
 The demo project includes:
-  - 3 friends: Alice, Bob, and Camila (Spanish)
-  - Threshold of 2 (any 2 friends can recover)
+  - 5 friends: Alice, Bob, Camila (Spanish), Dominique (French), Elias (German)
+  - Threshold of 3 (any 3 friends can recover)
   - Sample secret files in the manifest
   - Fully sealed and bundled, ready to test
-  - Camila's bundle is generated in Spanish
+  - Camila, Dominique, and Elias's bundles are in their language
 
 Example:
   rememory demo
@@ -58,8 +58,10 @@ func runDemo(cmd *cobra.Command, args []string) error {
 		{Name: "Alice", Contact: "alice@example.com"},
 		{Name: "Bob", Contact: "bob@example.com"},
 		{Name: "Camila", Contact: "camila@example.com", Language: "es"},
+		{Name: "Dominique", Contact: "dominique@example.com", Language: "fr"},
+		{Name: "Elias", Contact: "elias@example.com", Language: "de"},
 	}
-	threshold := 2
+	threshold := 3
 
 	fmt.Printf("Friends: %s\n", friendNames(friends))
 	fmt.Printf("Threshold: %d of %d\n\n", threshold, len(friends))
@@ -125,10 +127,10 @@ Note: In a real project, these would be your actual sensitive credentials.
 	fmt.Println("To test recovery:")
 	fmt.Printf("  1. Open %s/output/bundles/bundle-alice.zip\n", dirName)
 	fmt.Println("  2. Extract and open recover.html in a browser")
-	fmt.Println("  3. Alice's share is pre-loaded, add Bob's or Camila's README/LEEME file")
-	fmt.Println("  4. Recovery will happen automatically!")
+	fmt.Println("  3. Alice's piece is pre-loaded — add two more README files to reach the threshold")
+	fmt.Println("  4. Recovery will happen automatically")
 	fmt.Println()
-	fmt.Println("Camila's bundle is in Spanish - check bundle-camila.zip to see!")
+	fmt.Println("Camila, Dominique, and Elias's bundles are in their language — check bundle-camila.zip to see.")
 
 	return nil
 }

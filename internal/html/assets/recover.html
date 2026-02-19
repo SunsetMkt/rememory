@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="ReMemory {{VERSION}}">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'nonce-{{CSP_NONCE}}' 'wasm-unsafe-eval'; style-src 'unsafe-inline'; img-src blob: data:; connect-src blob:; form-action 'none';">
   <title>ReMemory Recovery Tool</title>
   <style>{{STYLES}}</style>
@@ -33,10 +34,10 @@
         <a href="index.html" data-i18n="nav_about">About</a>
         <a href="maker.html" data-i18n="nav_create">Create Bundles</a>
         <a href="docs.html" data-i18n="nav_guide">Guide</a>
-        <a href="https://github.com/eljojo/rememory" target="_blank">GitHub</a>
+        <a href="{{GITHUB_REPO}}" target="_blank">GitHub</a>
       </div>
       <div class="nav-links hidden" id="nav-links-bundle">
-        <a href="https://eljojo.github.io/rememory/docs" target="_blank" data-i18n="nav_guide">Guide</a>
+        <a href="{{GITHUB_PAGES}}/docs" target="_blank" data-i18n="nav_guide">Guide</a>
       </div>
       <select class="lang-select" id="lang-select" aria-label="Language">
         {{LANG_OPTIONS}}
@@ -127,7 +128,7 @@
     <p>ReMemory {{VERSION}} &mdash; <span data-i18n="works_offline">Works fully offline</span></p>
     <p>
       <span data-i18n="need_help">Need help?</span>
-      <a href="https://eljojo.github.io/rememory/docs#recovering" target="_blank">Docs</a> ·
+      <a href="{{GITHUB_PAGES}}/docs#recovering" target="_blank">Docs</a> ·
       <a href="{{GITHUB_URL}}" target="_blank" data-i18n="download_cli">Download CLI tool from GitHub</a>
     </p>
   </footer>

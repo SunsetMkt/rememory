@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="ReMemory {{VERSION}}">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'nonce-{{CSP_NONCE}}' 'wasm-unsafe-eval'; style-src 'unsafe-inline'; img-src blob: data:; connect-src blob:; form-action 'none';">
   <title>🧠 ReMemory - Create Recovery Bundles</title>
   <style>{{STYLES}}</style>
@@ -303,7 +304,7 @@
         <a href="index.html" data-i18n="nav_about">About</a>
         <a href="docs.html" data-i18n="nav_guide">Guide</a>
         <a href="recover.html" data-i18n="nav_recover">Recover</a>
-        <a href="https://github.com/eljojo/rememory" target="_blank">GitHub</a>
+        <a href="{{GITHUB_REPO}}" target="_blank">GitHub</a>
       </div>
       <select class="lang-select" id="lang-select">
         {{LANG_OPTIONS}}
@@ -577,7 +578,7 @@
               <p>This can happen with older browsers or certain privacy settings.</p>
               <div class="loading-error-actions">
                 <button class="btn btn-primary" id="reload-page-btn">Reload page</button>
-                <a href="https://github.com/eljojo/rememory" class="btn btn-secondary" target="_blank">Use CLI tool instead</a>
+                <a href="{{GITHUB_REPO}}" class="btn btn-secondary" target="_blank">Use CLI tool instead</a>
               </div>
             </div>
           `;
