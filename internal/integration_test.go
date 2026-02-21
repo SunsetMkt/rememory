@@ -668,66 +668,20 @@ func TestBundleRecovery(t *testing.T) {
 
 func extractShareFromBundle(t *testing.T, bundlePath string) *core.Share {
 	t.Helper()
-
-	r, err := zip.OpenReader(bundlePath)
+	share, err := bundle.ExtractShareFromZip(bundlePath)
 	if err != nil {
-		t.Fatalf("opening bundle: %v", err)
+		t.Fatalf("extracting share from %s: %v", bundlePath, err)
 	}
-	defer r.Close()
-
-	for _, f := range r.File {
-		if translations.IsReadmeFile(f.Name, ".txt") {
-			rc, _ := f.Open()
-			data := make([]byte, f.UncompressedSize64)
-			rc.Read(data)
-			rc.Close()
-
-			share, err := core.ParseShare(data)
-			if err != nil {
-				t.Fatalf("parsing share: %v", err)
-			}
-			return share
-		}
-	}
-	t.Fatal("README file not found in bundle")
-	return nil
+	return share
 }
 
 func extractManifestFromBundle(t *testing.T, bundlePath string) []byte {
 	t.Helper()
-
-	r, err := zip.OpenReader(bundlePath)
+	data, err := bundle.ExtractManifestFromZip(bundlePath)
 	if err != nil {
-		t.Fatalf("opening bundle: %v", err)
+		t.Fatalf("extracting manifest from %s: %v", bundlePath, err)
 	}
-	defer r.Close()
-
-	var recoverData []byte
-	for _, f := range r.File {
-		if f.Name == "MANIFEST.age" {
-			rc, _ := f.Open()
-			data, _ := io.ReadAll(rc)
-			rc.Close()
-			return data
-		}
-		if f.Name == "recover.html" {
-			rc, _ := f.Open()
-			recoverData, _ = io.ReadAll(rc)
-			rc.Close()
-		}
-	}
-
-	// Fall back to extracting manifest from recover.html personalization data
-	if len(recoverData) > 0 {
-		manifest, err := html.ExtractManifestFromHTML(recoverData)
-		if err != nil {
-			t.Fatalf("extracting manifest from recover.html: %v", err)
-		}
-		return manifest
-	}
-
-	t.Fatal("MANIFEST.age not found in bundle and no recover.html to extract from")
-	return nil
+	return data
 }
 
 // TestAnonymousBundleGeneration tests bundle generation for anonymous projects

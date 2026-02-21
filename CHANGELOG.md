@@ -5,6 +5,7 @@ All notable changes to ReMemory are documented here.
 ## Unreleased
 
 - **ZIP archive format** — Encrypted payloads now use ZIP instead of tar.gz. ZIP is understood by every operating system without extra tools, which makes manual inspection easier if someone ever needs it. Existing bundles created with earlier versions still work — the recovery tool detects the format automatically.
+- **Recover directly from bundles** — `rememory recover` now accepts bundle ZIP files. You can pass the ZIPs your friends send you without unzipping them first, and the manifest is extracted automatically. `rememory recover bundle-alice.zip bundle-bob.zip` just works.
 
 ## v0.0.14 — 2026-02-19
 

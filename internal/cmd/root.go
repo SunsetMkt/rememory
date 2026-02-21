@@ -15,7 +15,7 @@ using Shamir's Secret Sharing, and creates recovery bundles for trusted friends.
 
 Create a project:    rememory init my-recovery
 Seal the manifest:   rememory seal
-Recover from shares: rememory recover share1.txt share2.txt share3.txt`,
+Recover from shares: rememory recover bundle-alice.zip bundle-bob.zip`,
 }
 
 func Execute(v string) error {

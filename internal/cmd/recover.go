@@ -8,6 +8,7 @@ import (
 	"strings"
 	"time"
 
+	"github.com/eljojo/rememory/internal/bundle"
 	"github.com/eljojo/rememory/internal/core"
 	"github.com/eljojo/rememory/internal/html"
 	"github.com/eljojo/rememory/internal/manifest"
@@ -15,15 +16,21 @@ import (
 )
 
 var recoverCmd = &cobra.Command{
-	Use:   "recover share1.txt share2.txt ... [--manifest MANIFEST.age]",
+	Use:   "recover [share1.txt|bundle1.zip] [share2.txt|bundle2.zip] ... [--manifest MANIFEST.age]",
 	Short: "Recover the manifest from shares",
 	Long: `Recover reconstructs the passphrase from shares and decrypts the manifest.
 
 This command can be run from anywhere (doesn't need a project directory).
 You need at least the threshold number of shares to recover.
 
+Shares can be plain text files, bundle ZIP files, or personalized
+recover.html files. The manifest is extracted from the first ZIP or
+HTML that contains one, unless --manifest is set.
+
 Example:
-  rememory recover SHARE-alice.txt SHARE-bob.txt SHARE-carol.txt -m MANIFEST.age`,
+  rememory recover bundle-alice.zip bundle-bob.zip
+  rememory recover alice/recover.html bob/recover.html carol/recover.html
+  rememory recover SHARE-alice.txt SHARE-bob.txt -m MANIFEST.age`,
 	Args: cobra.MinimumNArgs(1),
 	RunE: runRecover,
 }
@@ -36,7 +43,7 @@ var (
 
 func init() {
 	rootCmd.AddCommand(recoverCmd)
-	recoverCmd.Flags().StringVarP(&recoverManifest, "manifest", "m", "", "Path to MANIFEST.age file")
+	recoverCmd.Flags().StringVarP(&recoverManifest, "manifest", "m", "", "Path to MANIFEST.age file (or bundle .zip)")
 	recoverCmd.Flags().StringVarP(&recoverOutput, "output", "o", "", "Output directory (default: recovered-TIMESTAMP)")
 	recoverCmd.Flags().BoolVar(&recoverPassphrase, "passphrase-only", false, "Only output the passphrase, don't decrypt")
 }
@@ -47,14 +54,33 @@ func runRecover(cmd *cobra.Command, args []string) error {
 
 	shares := make([]*core.Share, len(args))
 	for i, path := range args {
-		content, err := os.ReadFile(path)
-		if err != nil {
-			return fmt.Errorf("reading share %s: %w", path, err)
-		}
+		var share *core.Share
+		var err error
 
-		share, err := core.ParseShare(content)
-		if err != nil {
-			return fmt.Errorf("parsing share %s: %w", path, err)
+		if isZipFile(path) {
+			share, err = bundle.ExtractShareFromZip(path)
+			if err != nil {
+				return fmt.Errorf("extracting share from %s: %w", path, err)
+			}
+		} else if isHTMLFile(path) {
+			content, err := os.ReadFile(path)
+			if err != nil {
+				return fmt.Errorf("reading %s: %w", path, err)
+			}
+			share, err = html.ExtractShareFromHTML(content)
+			if err != nil {
+				return fmt.Errorf("extracting share from %s: %w", path, err)
+			}
+		} else {
+			content, err := os.ReadFile(path)
+			if err != nil {
+				return fmt.Errorf("reading share %s: %w", path, err)
+			}
+
+			share, err = core.ParseShare(content)
+			if err != nil {
+				return fmt.Errorf("parsing share %s: %w", path, err)
+			}
 		}
 
 		// Verify checksum
@@ -120,37 +146,71 @@ func runRecover(cmd *cobra.Command, args []string) error {
 		return nil
 	}
 
-	// Find manifest file
+	// Find manifest
+	var encryptedData []byte
 	manifestPath := recoverManifest
-	if manifestPath == "" {
-		// Try to find MANIFEST.age in current directory, then recover.html
-		if _, err := os.Stat("MANIFEST.age"); err == nil {
-			manifestPath = "MANIFEST.age"
-		} else if _, err := os.Stat("recover.html"); err == nil {
-			manifestPath = "recover.html"
-		} else {
-			return fmt.Errorf("MANIFEST.age not found in current directory; use --manifest to specify path\n  (you can also pass a personalized recover.html file)")
+
+	if manifestPath != "" && isZipFile(manifestPath) {
+		// --manifest points to a ZIP — extract from it
+		encryptedData, err = bundle.ExtractManifestFromZip(manifestPath)
+		if err != nil {
+			return fmt.Errorf("extracting manifest from %s: %w", manifestPath, err)
+		}
+		fmt.Printf("Extracted manifest from %s\n", manifestPath)
+	} else if manifestPath == "" {
+		// No --manifest flag — try extracting from the provided args
+		for _, path := range args {
+			if isZipFile(path) {
+				data, err := bundle.ExtractManifestFromZip(path)
+				if err == nil {
+					encryptedData = data
+					fmt.Printf("Extracted manifest from %s\n", path)
+					break
+				}
+			} else if isHTMLFile(path) {
+				content, err := os.ReadFile(path)
+				if err == nil {
+					data, err := html.ExtractManifestFromHTML(content)
+					if err == nil {
+						encryptedData = data
+						fmt.Printf("Extracted manifest from %s\n", path)
+						break
+					}
+				}
+			}
+		}
+
+		// Fall back to searching the current directory
+		if encryptedData == nil {
+			if _, err := os.Stat("MANIFEST.age"); err == nil {
+				manifestPath = "MANIFEST.age"
+			} else if _, err := os.Stat("recover.html"); err == nil {
+				manifestPath = "recover.html"
+			} else {
+				return fmt.Errorf("no manifest found — pass --manifest or include a bundle zip that contains one")
+			}
 		}
 	}
 
 	fmt.Println("Decrypting manifest...")
 
-	// Read manifest data — either directly from .age file or extracted from .html
-	var encryptedData []byte
-	if strings.HasSuffix(strings.ToLower(manifestPath), ".html") || strings.HasSuffix(strings.ToLower(manifestPath), ".htm") {
-		htmlContent, err := os.ReadFile(manifestPath)
-		if err != nil {
-			return fmt.Errorf("reading %s: %w", manifestPath, err)
-		}
-		encryptedData, err = html.ExtractManifestFromHTML(htmlContent)
-		if err != nil {
-			return fmt.Errorf("extracting manifest from %s: %w", manifestPath, err)
-		}
-		fmt.Printf("Extracted manifest from %s\n", manifestPath)
-	} else {
-		encryptedData, err = os.ReadFile(manifestPath)
-		if err != nil {
-			return fmt.Errorf("reading manifest: %w", err)
+	// Read manifest from file if not already extracted from a ZIP
+	if encryptedData == nil {
+		if strings.HasSuffix(strings.ToLower(manifestPath), ".html") || strings.HasSuffix(strings.ToLower(manifestPath), ".htm") {
+			htmlContent, err := os.ReadFile(manifestPath)
+			if err != nil {
+				return fmt.Errorf("reading %s: %w", manifestPath, err)
+			}
+			encryptedData, err = html.ExtractManifestFromHTML(htmlContent)
+			if err != nil {
+				return fmt.Errorf("extracting manifest from %s: %w", manifestPath, err)
+			}
+			fmt.Printf("Extracted manifest from %s\n", manifestPath)
+		} else {
+			encryptedData, err = os.ReadFile(manifestPath)
+			if err != nil {
+				return fmt.Errorf("reading manifest: %w", err)
+			}
 		}
 	}
 
@@ -200,4 +260,13 @@ func runRecover(cmd *cobra.Command, args []string) error {
 	}
 
 	return nil
+}
+
+func isZipFile(path string) bool {
+	return strings.HasSuffix(strings.ToLower(path), ".zip")
+}
+
+func isHTMLFile(path string) bool {
+	lower := strings.ToLower(path)
+	return strings.HasSuffix(lower, ".html") || strings.HasSuffix(lower, ".htm")
 }

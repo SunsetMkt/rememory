@@ -5,11 +5,14 @@ import (
 	"encoding/json"
 	"fmt"
 	"regexp"
+
+	"github.com/eljojo/rememory/internal/core"
 )
 
-// personalizationManifest is a minimal struct for extracting just the manifest
-// from the PERSONALIZATION JSON embedded in recover.html.
-type personalizationManifest struct {
+// personalizationExtract is a minimal struct for extracting the share and/or
+// manifest from the PERSONALIZATION JSON embedded in recover.html.
+type personalizationExtract struct {
+	HolderShare string `json:"holderShare"`
 	ManifestB64 string `json:"manifestB64"`
 }
 
@@ -32,7 +35,7 @@ func ExtractManifestFromHTML(htmlContent []byte) ([]byte, error) {
 		return nil, fmt.Errorf("no PERSONALIZATION data found in HTML")
 	}
 
-	var p personalizationManifest
+	var p personalizationExtract
 	if err := json.Unmarshal(matches[1], &p); err != nil {
 		return nil, fmt.Errorf("parsing PERSONALIZATION JSON: %w", err)
 	}
@@ -47,4 +50,29 @@ func ExtractManifestFromHTML(htmlContent []byte) ([]byte, error) {
 	}
 
 	return data, nil
+}
+
+// ExtractShareFromHTML extracts the share from a personalized recover.html file.
+// It finds the embedded PERSONALIZATION JSON and parses the holderShare field.
+func ExtractShareFromHTML(htmlContent []byte) (*core.Share, error) {
+	matches := personalizationRe.FindSubmatch(htmlContent)
+	if len(matches) < 2 {
+		return nil, fmt.Errorf("no PERSONALIZATION data found in HTML")
+	}
+
+	var p personalizationExtract
+	if err := json.Unmarshal(matches[1], &p); err != nil {
+		return nil, fmt.Errorf("parsing PERSONALIZATION JSON: %w", err)
+	}
+
+	if p.HolderShare == "" {
+		return nil, fmt.Errorf("no embedded share in HTML (holderShare is empty)")
+	}
+
+	share, err := core.ParseShare([]byte(p.HolderShare))
+	if err != nil {
+		return nil, fmt.Errorf("parsing share from HTML: %w", err)
+	}
+
+	return share, nil
 }

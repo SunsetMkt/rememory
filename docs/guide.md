@@ -376,10 +376,13 @@ If the browser tool doesn't work:
 
 ```bash
 # Download rememory from GitHub releases, then:
-rememory recover \
-  --shares alice-readme.txt,bob-readme.txt,carol-readme.txt \
-  --manifest MANIFEST.age \
-  --output recovered/
+rememory recover bundle-alice.zip bundle-bob.zip bundle-carol.zip
+```
+
+You can also pass extracted share files and a manifest separately:
+
+```bash
+rememory recover SHARE-alice.txt SHARE-bob.txt SHARE-carol.txt -m MANIFEST.age
 ```
 
 ## Verifying Bundles
