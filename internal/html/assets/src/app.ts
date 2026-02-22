@@ -209,7 +209,15 @@ type UIShare = ParsedShare & { isHolder?: boolean };
             label: t('action_try_different_shares'),
             primary: true,
             onClick: () => {
-              state.shares = [];
+              // Preserve holder's pre-loaded share on retry. Check both isHolder flag
+              // (primary) and holder name (fallback for edge cases).
+              const holderName = personalization?.holder?.toLowerCase() || '';
+              const holderShare = state.shares.find((share) => {
+                const shareHolder = share.holder?.toLowerCase();
+                return (share as UIShare).isHolder === true || (holderName !== '' && shareHolder === holderName);
+              });
+
+              state.shares = holderShare ? [holderShare] : [];
               state.recoveryComplete = false;
               updateSharesUI();
               elements.step1Card?.classList.remove('collapsed');
