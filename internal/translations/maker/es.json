@@ -80,5 +80,21 @@
   "timelock_preview": "Se abre después del {0}",
   "timelock_network_hint": "La recuperación necesitará una breve conexión a internet para verificar el bloqueo por fecha.",
   "timelock_encrypting": "Aplicando bloqueo por fecha...",
-  "next_steps_link": "Qué hacer ahora"
+  "next_steps_link": "Qué hacer ahora",
+
+  "how_summary": "Cómo funciona",
+  "how_creating_title": "Crear kits",
+  "how_creating_add": "Agrega tus archivos y elige en quién confías",
+  "how_creating_threshold": "Decide cuántas personas deben estar de acuerdo para recuperar",
+  "how_creating_generate": "Cada persona recibe un kit único",
+  "how_creating_send": "Envía cada kit como prefieras",
+  "how_recovery_title": "Recuperación",
+  "how_recovery_open": "Abre recover.html en cualquier navegador",
+  "how_recovery_combine": "Combina suficientes piezas y los archivos se desbloquean",
+  "how_recovery_offline": "Sin servidor, sin internet, sin instalar nada",
+  "how_security_title": "Seguridad",
+  "how_security_local": "Todo ocurre en tu navegador — nada sale de tu dispositivo",
+  "how_security_offline": "Esta página funciona sin conexión — guárdala con Archivo \u203a Guardar como",
+  "how_security_encryption": "Protegido con cifrado age",
+  "how_security_opensource": "Código abierto (Apache-2.0)"
 }

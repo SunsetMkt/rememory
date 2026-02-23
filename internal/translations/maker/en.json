@@ -80,5 +80,21 @@
   "timelock_preview": "Opens after {0}",
   "timelock_network_hint": "Recovery will need a brief internet connection to verify the time lock.",
   "timelock_encrypting": "Applying time lock...",
-  "next_steps_link": "What to do next"
+  "next_steps_link": "What to do next",
+
+  "how_summary": "How it works",
+  "how_creating_title": "Creating bundles",
+  "how_creating_add": "Add your files and choose who you trust",
+  "how_creating_threshold": "Decide how many people must agree to recover",
+  "how_creating_generate": "Each person gets a unique bundle",
+  "how_creating_send": "Send each bundle however works best",
+  "how_recovery_title": "Recovery",
+  "how_recovery_open": "Open recover.html in any browser",
+  "how_recovery_combine": "Combine enough pieces and the files are unlocked",
+  "how_recovery_offline": "No server, no internet, nothing to install",
+  "how_security_title": "Security",
+  "how_security_local": "Everything runs in your browser — nothing leaves your device",
+  "how_security_offline": "This page works offline — save it with File \u203a Save As",
+  "how_security_encryption": "Protected with age encryption",
+  "how_security_opensource": "Open source (Apache-2.0)"
 }

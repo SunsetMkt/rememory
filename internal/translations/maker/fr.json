@@ -80,5 +80,21 @@
   "timelock_preview": "Ouvre après le {0}",
   "timelock_network_hint": "La récupération nécessitera une brève connexion internet pour vérifier le verrou temporel.",
   "timelock_encrypting": "Application du verrou temporel...",
-  "next_steps_link": "Et maintenant"
+  "next_steps_link": "Et maintenant",
+
+  "how_summary": "Comment ça marche",
+  "how_creating_title": "Créer des enveloppes",
+  "how_creating_add": "Ajoutez vos fichiers et choisissez à qui faire confiance",
+  "how_creating_threshold": "Décidez combien de personnes doivent se mettre d'accord",
+  "how_creating_generate": "Chaque personne reçoit une enveloppe unique",
+  "how_creating_send": "Envoyez chaque enveloppe comme vous le souhaitez",
+  "how_recovery_title": "Récupération",
+  "how_recovery_open": "Ouvrez recover.html dans n'importe quel navigateur",
+  "how_recovery_combine": "Combinez assez de parts et les fichiers se déverrouillent",
+  "how_recovery_offline": "Pas de serveur, pas d'internet, rien à installer",
+  "how_security_title": "Sécurité",
+  "how_security_local": "Tout se passe dans votre navigateur — rien ne quitte votre appareil",
+  "how_security_offline": "Cette page fonctionne hors ligne — enregistrez-la avec Fichier \u203a Enregistrer sous",
+  "how_security_encryption": "Protégé par le chiffrement age",
+  "how_security_opensource": "Open source (Apache-2.0)"
 }

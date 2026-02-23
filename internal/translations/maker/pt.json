@@ -80,5 +80,21 @@
   "timelock_preview": "Abre após {0}",
   "timelock_network_hint": "A recuperação precisará de uma breve conexão à internet para verificar o bloqueio por data.",
   "timelock_encrypting": "Aplicando bloqueio por data...",
-  "next_steps_link": "O que fazer agora"
+  "next_steps_link": "O que fazer agora",
+
+  "how_summary": "Como funciona",
+  "how_creating_title": "Criar pacotes",
+  "how_creating_add": "Adicione seus arquivos e escolha em quem confiar",
+  "how_creating_threshold": "Decida quantas pessoas precisam concordar para recuperar",
+  "how_creating_generate": "Cada pessoa recebe um pacote único",
+  "how_creating_send": "Envie cada pacote da forma que preferir",
+  "how_recovery_title": "Recuperação",
+  "how_recovery_open": "Abra o recover.html em qualquer navegador",
+  "how_recovery_combine": "Combine peças suficientes e os arquivos são desbloqueados",
+  "how_recovery_offline": "Sem servidor, sem internet, sem instalação",
+  "how_security_title": "Segurança",
+  "how_security_local": "Tudo acontece no seu navegador — nada sai do seu dispositivo",
+  "how_security_offline": "Esta página funciona offline — salve com Arquivo \u203a Salvar como",
+  "how_security_encryption": "Protegido com criptografia age",
+  "how_security_opensource": "Código aberto (Apache-2.0)"
 }

@@ -80,5 +80,21 @@
   "timelock_preview": "Odpre se po {0}",
   "timelock_network_hint": "Obnovitev bo potrebovala kratko internetno povezavo za preverjanje časovnega zaklepanja.",
   "timelock_encrypting": "Izvajanje časovnega zaklepanja...",
-  "next_steps_link": "Naslednji koraki"
+  "next_steps_link": "Naslednji koraki",
+
+  "how_summary": "Kako deluje",
+  "how_creating_title": "Ustvarjanje svežnjev",
+  "how_creating_add": "Dodajte datoteke in izberite, komu zaupate",
+  "how_creating_threshold": "Določite, koliko oseb se mora strinjati za obnovitev",
+  "how_creating_generate": "Vsaka oseba prejme edinstven sveženj",
+  "how_creating_send": "Pošljite vsak sveženj na način, ki vam ustreza",
+  "how_recovery_title": "Obnovitev",
+  "how_recovery_open": "Odprite recover.html v kateremkoli brskalniku",
+  "how_recovery_combine": "Združite dovolj delov in datoteke se odklenejo",
+  "how_recovery_offline": "Brez strežnika, brez interneta, brez namestitve",
+  "how_security_title": "Varnost",
+  "how_security_local": "Vse poteka v vašem brskalniku — nič ne zapusti vaše naprave",
+  "how_security_offline": "Ta stran deluje brez povezave — shranite jo z Datoteka \u203a Shrani kot",
+  "how_security_encryption": "Zaščiteno s šifriranjem age",
+  "how_security_opensource": "Odprtokodno (Apache-2.0)"
 }

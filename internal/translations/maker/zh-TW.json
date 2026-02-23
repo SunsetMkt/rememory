@@ -80,5 +80,21 @@
   "timelock_preview": "{0} 之後可開啟",
   "timelock_network_hint": "復原時需要短暫的網路連線來驗證時間鎖。",
   "timelock_encrypting": "正在套用時間鎖...",
-  "next_steps_link": "接下來該做什麼"
+  "next_steps_link": "接下來該做什麼",
+
+  "how_summary": "運作方式",
+  "how_creating_title": "建立復原包",
+  "how_creating_add": "加入你的檔案，選擇你信任的人",
+  "how_creating_threshold": "決定需要幾個人同意才能復原",
+  "how_creating_generate": "每個人會收到一份獨一無二的復原包",
+  "how_creating_send": "用你覺得最好的方式寄出每份復原包",
+  "how_recovery_title": "復原",
+  "how_recovery_open": "在任何瀏覽器中開啟 recover.html",
+  "how_recovery_combine": "集齊足夠的碎片，檔案就會解鎖",
+  "how_recovery_offline": "不需要伺服器、不需要網路、不需要安裝",
+  "how_security_title": "安全性",
+  "how_security_local": "所有操作都在你的瀏覽器中進行 — 不會離開你的裝置",
+  "how_security_offline": "這個頁面可以離線使用 — 用檔案 \u203a 另存新檔儲存",
+  "how_security_encryption": "使用 age 加密保護",
+  "how_security_opensource": "開放原始碼 (Apache-2.0)"
 }

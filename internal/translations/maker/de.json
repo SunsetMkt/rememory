@@ -80,5 +80,21 @@
   "timelock_preview": "Öffnet nach dem {0}",
   "timelock_network_hint": "Zur Wiederherstellung wird eine kurze Internetverbindung benötigt, um die Zeitsperre zu prüfen.",
   "timelock_encrypting": "Zeitsperre wird angewendet...",
-  "next_steps_link": "Wie es weitergeht"
+  "next_steps_link": "Wie es weitergeht",
+
+  "how_summary": "So funktioniert's",
+  "how_creating_title": "Umschläge erstellen",
+  "how_creating_add": "Füge deine Dateien hinzu und wähle, wem du vertraust",
+  "how_creating_threshold": "Lege fest, wie viele Personen zustimmen müssen",
+  "how_creating_generate": "Jede Person erhält einen eigenen Umschlag",
+  "how_creating_send": "Versende jeden Umschlag so, wie es am besten passt",
+  "how_recovery_title": "Wiederherstellung",
+  "how_recovery_open": "Öffne recover.html in einem beliebigen Browser",
+  "how_recovery_combine": "Kombiniere genug Teile und die Dateien werden entsperrt",
+  "how_recovery_offline": "Kein Server, kein Internet, keine Installation",
+  "how_security_title": "Sicherheit",
+  "how_security_local": "Alles läuft in deinem Browser — nichts verlässt dein Gerät",
+  "how_security_offline": "Diese Seite funktioniert offline — speichere sie mit Datei \u203a Speichern unter",
+  "how_security_encryption": "Geschützt mit age-Verschlüsselung",
+  "how_security_opensource": "Open Source (Apache-2.0)"
 }

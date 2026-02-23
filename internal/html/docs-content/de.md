@@ -16,7 +16,7 @@ footer_home: "Startseite"
 
 ReMemory schützt deine Dateien, indem es:
 
-1. sie mit [age](https://github.com/FiloSottile/age) verschlüsselt
+1. Sie mit [age](https://github.com/FiloSottile/age) verschlüsselt
 1. Den Schlüssel unter Vertrauenspersonen aufteilt
 1. Jeder Person ein eigenständiges Paket zur Wiederherstellung gibt
 
