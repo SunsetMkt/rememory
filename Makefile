@@ -180,4 +180,4 @@ update-pdf-png: build
 # Generate localized guide screenshots via Playwright (en, es, de, fr)
 screenshots: build
 	@if [ ! -d node_modules ]; then echo "Run 'npm install' first"; exit 1; fi
-	REMEMORY_BIN=./$(BINARY) npx playwright test e2e/screenshots.spec.ts --project=chromium
+	REMEMORY_BIN=./$(BINARY) REMEMORY_TEST_SCREENSHOTS=1 npx playwright test --project=chromium
