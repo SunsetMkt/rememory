@@ -320,9 +320,17 @@ input[type="file"] {
   transition: width 0.3s;
 }
 
+.generate-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
 .status-message {
   color: var(--text-secondary);
-  margin-bottom: 1rem;
+  margin: 0;
 }
 
 .status-message.error {

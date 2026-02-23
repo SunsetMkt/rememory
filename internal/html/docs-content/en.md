@@ -8,7 +8,7 @@ nav_create: "Create Bundles"
 nav_recover: "Recover"
 toc_title: "Contents"
 footer_source: "Source Code"
-footer_download: "Download CLI"
+footer_download: "Download"
 footer_home: "Home"
 ---
 
@@ -57,7 +57,7 @@ Three steps. Everything happens in your browser — your files never leave your 
 Add the people who will hold pieces of your recovery key. For each, provide a name and optionally contact information.
 
 <figure class="screenshot">
-<img src="screenshots/friends.png" alt="Adding friends in Step 1" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Screenshot: Adding friends form</div>'">
+<img src="screenshots/en/friends.png" alt="Adding friends in Step 1">
 <figcaption>Each person here will hold one piece of the key</figcaption>
 </figure>
 
@@ -78,7 +78,7 @@ High enough that collusion is unlikely. Low enough that recovery works if one or
 Drag and drop the files or folder you want to protect.
 
 <figure class="screenshot">
-<img src="screenshots/files.png" alt="Adding files in Step 2" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Screenshot: File upload area</div>'">
+<img src="screenshots/en/files.png" alt="Adding files in Step 2">
 <figcaption>Add the files you want to protect</figcaption>
 </figure>
 
@@ -100,7 +100,7 @@ Drag and drop the files or folder you want to protect.
 Click "Generate Bundles" to encrypt your files and create a bundle for each person.
 
 <figure class="screenshot">
-<img src="screenshots/bundles.png" alt="Generating bundles in Step 3" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Screenshot: Bundle generation</div>'">
+<img src="screenshots/en/bundles.png" alt="Generating bundles in Step 3">
 <figcaption>Download each bundle, or all at once</figcaption>
 </figure>
 
@@ -208,12 +208,12 @@ The simplest path. If you have the bundle ZIP (or the files from it):
 </div>
 
 <figure class="screenshot">
-<img src="screenshots/recovery-1.png" alt="Recovery interface - collecting shares" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Screenshot: Recovery process</div>'">
+<img src="screenshots/en/recovery-1.png" alt="Recovery interface - collecting shares">
 <figcaption>The recovery tool showing collected shares and contact list</figcaption>
 </figure>
 
 <figure class="screenshot">
-<img src="screenshots/recovery-2.png" alt="Recovery interface - decryption complete" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Screenshot: Recovery complete</div>'">
+<img src="screenshots/en/recovery-2.png" alt="Recovery interface - decryption complete">
 <figcaption>Once threshold is met, files are decrypted and ready to download</figcaption>
 </figure>
 
@@ -238,12 +238,12 @@ Each printed PDF includes your share as a list of numbered words. Type them into
 </div>
 
 <figure class="screenshot">
-<img src="screenshots/recovery-words-typing.png" alt="Typing recovery words from a printed PDF into the recovery tool" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Screenshot: Typing recovery words from a printed PDF into the recovery tool</div>'">
+<img src="screenshots/en/recovery-words-typing.png" alt="Typing recovery words from a printed PDF into the recovery tool">
 <figcaption>Type the numbered words from your printed PDF into the text area</figcaption>
 </figure>
 
 <figure class="screenshot">
-<img src="screenshots/recovery-words-recognized.png" alt="Recovery tool after words have been entered, showing the share was recognized" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Screenshot: Recovery tool after words have been entered, showing the share was recognized</div>'">
+<img src="screenshots/en/recovery-words-recognized.png" alt="Recovery tool after words have been entered, showing the share was recognized">
 <figcaption>The recovery tool recognizes the words and loads your share</figcaption>
 </figure>
 
@@ -288,12 +288,12 @@ If your device has a camera, scan the QR code on the PDF to import your share di
 </div>
 
 <figure class="screenshot">
-<img src="screenshots/qr-camera-permission.png" alt="Browser asking for camera permission" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Screenshot: Browser asking for webcam permission</div>'">
+<img src="screenshots/qr-camera-permission.png" alt="Browser asking for camera permission">
 <figcaption>Your browser will ask for permission to use the camera</figcaption>
 </figure>
 
 <figure class="screenshot">
-<img src="screenshots/qr-scanning.png" alt="Scanning a QR code from a printed PDF" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Screenshot: Scanning QR code from printed PDF</div>'">
+<img src="screenshots/qr-scanning.png" alt="Scanning a QR code from a printed PDF">
 <figcaption>Point your camera at the QR code on the printed PDF to import the share</figcaption>
 </figure>
 
@@ -306,7 +306,7 @@ If your device has a camera, scan the QR code on the PDF to import your share di
 </div>
 
 <figure class="screenshot">
-<img src="screenshots/manifest-file-picker.png" alt="Selecting MANIFEST.age from a folder" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Screenshot: Selecting MANIFEST.age from a folder</div>'">
+<img src="screenshots/manifest-file-picker.png" alt="Selecting MANIFEST.age from a folder">
 <figcaption>Select the MANIFEST.age file from where you stored it</figcaption>
 </figure>
 
@@ -520,17 +520,17 @@ Each person can receive their bundle in their preferred language. Seven language
 - Anyone can switch languages at any time
 
 <figure class="screenshot">
-<img src="screenshots/multilingual-language-dropdown.png" alt="Friend entry showing the bundle language dropdown in the web UI" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Screenshot: Friend entry showing the bundle language dropdown in the web UI</div>'">
+<img src="screenshots/en/multilingual-language-dropdown.png" alt="Friend entry showing the bundle language dropdown in the web UI">
 <figcaption>Each friend has a language dropdown to set their bundle language</figcaption>
 </figure>
 
 <figure class="screenshot">
-<img src="screenshots/demo-pdf-es/page-1.png" alt="recover.pdf opened in Spanish" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Screenshot: recover.html opened in a non-English language (e.g. Spanish)</div>'">
+<img src="screenshots/demo-pdf-es/page-1.png" alt="recover.pdf opened in Spanish">
 <figcaption>The recovery tool opens in the friend's selected language</figcaption>
 </figure>
 
 <figure class="screenshot">
-<img src="screenshots/demo-pdf-es/page-2.png" alt="recover.pdf opened in Spanish" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Screenshot: recover.html opened in a non-English language (e.g. Spanish)</div>'">
+<img src="screenshots/demo-pdf-es/page-2.png" alt="recover.pdf opened in Spanish">
 <figcaption>Word lists are translated too (both languages work)</figcaption>
 </figure>
 
@@ -542,9 +542,19 @@ You can set a waiting period when creating bundles. Even if your friends combine
 
 In the [bundle creator](maker.html), switch to **Advanced** mode and check **Add a time lock**. Choose how long the files should stay locked.
 
+<figure class="screenshot">
+<img src="screenshots/en/tlock-setup.png" alt="Time lock setup in Advanced mode">
+<figcaption>The time lock option appears in Advanced mode</figcaption>
+</figure>
+
 ### Recovery
 
 When someone opens a time-locked bundle before the date, the recovery tool shows a waiting notice. Once the time passes, recovery proceeds normally.
+
+<figure class="screenshot">
+<img src="screenshots/en/tlock-waiting.png" alt="Recovery tool showing a time lock waiting notice">
+<figcaption>The recovery tool waits until the time lock expires</figcaption>
+</figure>
 
 Opening a time-locked archive requires a brief internet connection. Your files aren't sent anywhere — the connection verifies that enough time has passed. Without the time lock, recovery is fully offline.
 

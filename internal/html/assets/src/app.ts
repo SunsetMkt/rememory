@@ -1104,9 +1104,10 @@ type UIShare = ParsedShare & { isHolder?: boolean };
       const fmt = window.rememoryTlock?.formatUnlockDate
         ? window.rememoryTlock.formatUnlockDate(unlockDate, t)
         : { text: unlockDate.toLocaleDateString(), relative: false };
-      elements.tlockWaitingDate.textContent = fmt.relative
-        ? t('tlock_waiting_message_relative', fmt.text)
-        : t('tlock_waiting_message', fmt.text);
+      const boldDate = `<strong>${fmt.text}</strong>`;
+      elements.tlockWaitingDate.innerHTML = fmt.relative
+        ? t('tlock_waiting_message_relative', boldDate)
+        : t('tlock_waiting_message', boldDate);
     }
     elements.tlockWaiting.classList.remove('hidden');
     if (elements.recoverBtn) elements.recoverBtn.classList.add('hidden');

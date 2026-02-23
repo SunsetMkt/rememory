@@ -57,6 +57,8 @@ Create bundles in your browser — no installation required.
 
 Everything runs locally. Your files never leave your device.
 
+![The bundle creator — add friends, add files, generate](docs/screenshots/en/maker-overview.png)
+
 ### 💻 CLI
 
 For automation, scripting, or if you prefer the terminal.

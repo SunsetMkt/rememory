@@ -16,11 +16,11 @@ footer_home: "Startseite"
 
 ReMemory schützt deine Dateien, indem es:
 
-1. Sie mit [age](https://github.com/FiloSottile/age) verschlüsselt
+1. sie mit [age](https://github.com/FiloSottile/age) verschlüsselt
 1. Den Schlüssel unter Vertrauenspersonen aufteilt
 1. Jeder Person ein eigenständiges Paket zur Wiederherstellung gibt
 
-Die Wiederherstellung funktioniert komplett offline, im Browser.\* Keine Server, kein Bedarf, dass diese Website existiert.
+Die Wiederherstellung funktioniert komplett offline, im Browser.\* Keine Server, die Website muss dafür nicht existieren.
 
 <p style="font-size: 0.8125rem; color: #8A8480;">* Archive mit <a href="#timelock" style="color: #8A8480;">Zeitsperre</a> brauchen bei der Wiederherstellung eine kurze Internetverbindung.</p>
 
@@ -30,7 +30,7 @@ Die Wiederherstellung funktioniert komplett offline, im Browser.\* Keine Server,
 
 ## Warum ReMemory {#why-rememory}
 
-Du hast wahrscheinlich digitale Geheimnisse, die wichtig sind: Wiederherstellungscodes deines Passwort-Managers, Kryptowährungs-Seeds, wichtige Dokumente, Anweisungen für deine Liebsten. Was passiert damit, wenn du eines Tages nicht mehr erreichbar bist?
+Du hast wahrscheinlich digitale Informationen, die wichtig sind: Wiederherstellungscodes deines Passwort-Managers, Kryptowährungs-Seeds, wichtige Dokumente, Anweisungen für deine Liebsten. Was passiert damit, wenn du eines Tages nicht mehr erreichbar bist?
 
 Stell dir einen Tresor vor, der zwei Schlüssel braucht — keine einzelne Person hat genug, um allein hineinzukommen.
 
@@ -46,7 +46,7 @@ ReMemory geht einen anderen Weg:
 - **Kein einzelner Ausfallpunkt** — mehrere Personen müssen zusammenarbeiten
 - **Kein blindes Vertrauen in eine Person** — selbst dein engster Freund kommt allein nicht an deine Geheimnisse
 - **Offline und eigenständig** — die Wiederherstellung funktioniert ohne Internet oder Server\*
-- **Für alle gemacht** — klare Anleitungen, keine kryptografischen Rätsel
+- **Für alle gemacht** — klare Anleitungen, keine kryptografischen Fachkenntnisse nötig
 
 ## Pakete erstellen {#creating}
 
@@ -57,7 +57,7 @@ Drei Schritte. Alles passiert in deinem Browser — deine Dateien verlassen dein
 Füge die Personen hinzu, die Teile deines Wiederherstellungsschlüssels aufbewahren sollen. Für jede Person gibst du einen Namen und optional Kontaktdaten an.
 
 <figure class="screenshot">
-<img src="screenshots/friends.png" alt="Freunde hinzufügen in Schritt 1" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Screenshot: Formular zum Hinzufügen von Freunden</div>'">
+<img src="screenshots/de/friends.png" alt="Freunde hinzufügen in Schritt 1">
 <figcaption>Jede Person hier bewahrt einen Teil des Schlüssels auf</figcaption>
 </figure>
 
@@ -78,7 +78,7 @@ Hoch genug, dass Absprachen unwahrscheinlich sind. Niedrig genug, dass die Wiede
 Ziehe die Dateien oder den Ordner, den du schützen willst, per Drag & Drop in den Bereich.
 
 <figure class="screenshot">
-<img src="screenshots/files.png" alt="Dateien hinzufügen in Schritt 2" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Screenshot: Bereich zum Hochladen von Dateien</div>'">
+<img src="screenshots/de/files.png" alt="Dateien hinzufügen in Schritt 2">
 <figcaption>Füge die Dateien hinzu, die du schützen willst</figcaption>
 </figure>
 
@@ -100,7 +100,7 @@ Ziehe die Dateien oder den Ordner, den du schützen willst, per Drag & Drop in d
 Klicke auf „Pakete erstellen", um deine Dateien zu verschlüsseln und für jede Person ein Paket zu erzeugen.
 
 <figure class="screenshot">
-<img src="screenshots/bundles.png" alt="Pakete erstellen in Schritt 3" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Screenshot: Paketerstellung</div>'">
+<img src="screenshots/de/bundles.png" alt="Pakete erstellen in Schritt 3">
 <figcaption>Lade jedes Paket einzeln herunter, oder alle auf einmal</figcaption>
 </figure>
 
@@ -208,12 +208,12 @@ Der einfachste Weg. Wenn du die Paket-ZIP hast (oder die Dateien daraus):
 </div>
 
 <figure class="screenshot">
-<img src="screenshots/recovery-1.png" alt="Wiederherstellung - Teile sammeln" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Screenshot: Wiederherstellungsprozess</div>'">
+<img src="screenshots/de/recovery-1.png" alt="Wiederherstellung - Teile sammeln">
 <figcaption>Das Wiederherstellungstool zeigt die gesammelten Teile und die Kontaktliste</figcaption>
 </figure>
 
 <figure class="screenshot">
-<img src="screenshots/recovery-2.png" alt="Wiederherstellung - Entschlüsselung abgeschlossen" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Screenshot: Wiederherstellung abgeschlossen</div>'">
+<img src="screenshots/de/recovery-2.png" alt="Wiederherstellung - Entschlüsselung abgeschlossen">
 <figcaption>Wenn die Schwelle erreicht ist, werden die Dateien entschlüsselt und stehen zum Download bereit</figcaption>
 </figure>
 
@@ -238,12 +238,12 @@ Jedes ausgedruckte PDF enthält deinen Teil als Liste nummerierter Wörter. Tipp
 </div>
 
 <figure class="screenshot">
-<img src="screenshots/recovery-words-typing.png" alt="Wiederherstellungswörter aus einem ausgedruckten PDF eingeben" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Screenshot: Wiederherstellungswörter eintippen</div>'">
+<img src="screenshots/de/recovery-words-typing.png" alt="Wiederherstellungswörter aus einem ausgedruckten PDF eingeben">
 <figcaption>Tippe die nummerierten Wörter aus deinem ausgedruckten PDF in das Textfeld</figcaption>
 </figure>
 
 <figure class="screenshot">
-<img src="screenshots/recovery-words-recognized.png" alt="Wiederherstellungstool nach Eingabe der Wörter" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Screenshot: Wiederherstellungstool nach Eingabe der Wörter</div>'">
+<img src="screenshots/de/recovery-words-recognized.png" alt="Wiederherstellungstool nach Eingabe der Wörter">
 <figcaption>Das Tool erkennt die Wörter und lädt deinen Teil</figcaption>
 </figure>
 
@@ -288,12 +288,12 @@ Wenn dein Gerät eine Kamera hat, scanne den QR-Code auf dem PDF, um deinen Teil
 </div>
 
 <figure class="screenshot">
-<img src="screenshots/qr-camera-permission.png" alt="Browser fragt nach Kamerazugriff" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Screenshot: Browser fragt nach Kamerazugriff</div>'">
+<img src="screenshots/qr-camera-permission.png" alt="Browser fragt nach Kamerazugriff">
 <figcaption>Dein Browser fragt nach der Erlaubnis, die Kamera zu verwenden</figcaption>
 </figure>
 
 <figure class="screenshot">
-<img src="screenshots/qr-scanning.png" alt="QR-Code von einem ausgedruckten PDF scannen" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Screenshot: QR-Code scannen</div>'">
+<img src="screenshots/qr-scanning.png" alt="QR-Code von einem ausgedruckten PDF scannen">
 <figcaption>Richte deine Kamera auf den QR-Code des ausgedruckten PDFs, um den Teil zu importieren</figcaption>
 </figure>
 
@@ -306,7 +306,7 @@ Wenn dein Gerät eine Kamera hat, scanne den QR-Code auf dem PDF, um deinen Teil
 </div>
 
 <figure class="screenshot">
-<img src="screenshots/manifest-file-picker.png" alt="MANIFEST.age aus einem Ordner auswählen" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Screenshot: MANIFEST.age auswählen</div>'">
+<img src="screenshots/manifest-file-picker.png" alt="MANIFEST.age aus einem Ordner auswählen">
 <figcaption>Wähle die Datei MANIFEST.age von dort, wo du sie gespeichert hast</figcaption>
 </figure>
 
@@ -520,17 +520,17 @@ Jede Person kann ihr Paket in ihrer bevorzugten Sprache erhalten. Es ist in sieb
 - Jeder kann jederzeit die Sprache wechseln
 
 <figure class="screenshot">
-<img src="screenshots/multilingual-language-dropdown.png" alt="Freundeintrag mit dem Sprach-Dropdown für das Paket" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Screenshot: Freundeintrag mit Sprach-Dropdown</div>'">
+<img src="screenshots/de/multilingual-language-dropdown.png" alt="Freundeintrag mit dem Sprach-Dropdown für das Paket">
 <figcaption>Jeder Freund hat ein Dropdown-Menü, um die Sprache seines Pakets festzulegen</figcaption>
 </figure>
 
 <figure class="screenshot">
-<img src="screenshots/demo-pdf-es/page-1.png" alt="recover.pdf auf Spanisch geöffnet" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Screenshot: Wiederherstellungstool in einer anderen Sprache</div>'">
+<img src="screenshots/demo-pdf-es/page-1.png" alt="recover.pdf auf Spanisch geöffnet">
 <figcaption>Das Wiederherstellungstool öffnet sich in der gewählten Sprache des Freundes</figcaption>
 </figure>
 
 <figure class="screenshot">
-<img src="screenshots/demo-pdf-es/page-2.png" alt="recover.pdf auf Spanisch geöffnet" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Screenshot: Wiederherstellungstool in einer anderen Sprache</div>'">
+<img src="screenshots/demo-pdf-es/page-2.png" alt="recover.pdf auf Spanisch geöffnet">
 <figcaption>Die Wortlisten sind ebenfalls übersetzt (beide Sprachen funktionieren)</figcaption>
 </figure>
 
@@ -542,9 +542,19 @@ Du kannst beim Erstellen der Pakete eine Wartezeit festlegen. Selbst wenn deine 
 
 Wechsle im [Paket-Ersteller](maker.html) in den Modus **Erweitert** und aktiviere **Zeitsperre hinzufügen**. Wähle, wie lange die Dateien gesperrt bleiben sollen.
 
+<figure class="screenshot">
+<img src="screenshots/de/tlock-setup.png" alt="Zeitsperre-Einrichtung im erweiterten Modus">
+<figcaption>Die Zeitsperre-Option erscheint im erweiterten Modus</figcaption>
+</figure>
+
 ### Wiederherstellung
 
 Wenn jemand ein Paket mit Zeitsperre vor dem Datum öffnet, zeigt das Wiederherstellungstool einen Hinweis zum Warten. Sobald die Zeit abgelaufen ist, geht die Wiederherstellung normal weiter.
+
+<figure class="screenshot">
+<img src="screenshots/de/tlock-waiting.png" alt="Wiederherstellungstool zeigt einen Zeitsperre-Hinweis">
+<figcaption>Das Wiederherstellungstool wartet, bis die Zeitsperre abgelaufen ist</figcaption>
+</figure>
 
 Das Öffnen eines Archivs mit Zeitsperre erfordert eine kurze Internetverbindung. Deine Dateien werden nirgendwohin gesendet — die Verbindung prüft nur, ob genügend Zeit vergangen ist. Ohne Zeitsperre funktioniert die Wiederherstellung komplett offline.
 

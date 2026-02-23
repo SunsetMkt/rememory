@@ -416,16 +416,19 @@
 
     <!-- Step 3: Generate -->
     <div class="card">
-      <h2 style="display: flex; justify-content: space-between; align-items: center;">
-        <span><span class="step-number">3</span> <span data-i18n="step3_title">Generate Bundles</span></span>
+      <div class="card-header">
+        <h2><span class="step-number">3</span> <span data-i18n="step3_title">Generate Bundles</span></h2>
         {{TLOCK_TABS_HTML}}
-      </h2>
+      </div>
 
       {{TLOCK_PANEL_HTML}}
 
-      <button id="generate-btn" class="btn btn-primary" disabled>
-        <span data-i18n="generate_btn">Generate Bundles</span>
-      </button>
+      <div class="generate-row">
+        <button id="generate-btn" class="btn btn-primary" disabled>
+          <span data-i18n="generate_btn">Generate Bundles</span>
+        </button>
+        <p id="status-message" class="status-message"></p>
+      </div>
 
       <p id="wasm-loading-indicator" class="wasm-loading-hint">
         <span class="spinner-small"></span>
@@ -438,18 +441,13 @@
         <div class="fill" style="width: 0%"></div>
       </div>
 
-      <p id="status-message" class="status-message"></p>
-
       <div id="bundles-list" class="hidden"></div>
 
       <div id="download-all-section" class="download-actions hidden">
         <button id="download-all-btn" class="btn btn-success">
           <span data-i18n="download_all_btn">Download All Bundles</span>
         </button>
-        <button id="download-yaml-btn" class="btn btn-secondary">
-          <span data-i18n="download_yaml_btn">Save project.yml</span>
-        </button>
-        <p class="next-steps-hint"><a href="https://eljojo.github.io/rememory/docs.html#distributing" target="_blank" data-i18n="next_steps_link">What to do next</a></p>
+        <p class="next-steps-hint"><a href="https://eljojo.github.io/rememory/docs.html#distributing" target="_blank" data-i18n="next_steps_link">What to do next</a> · <a href="#" id="download-yaml-btn" data-i18n="download_yaml_btn">Save project.yml</a></p>
       </div>
     </div>
   </div>

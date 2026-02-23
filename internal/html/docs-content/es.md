@@ -8,7 +8,7 @@ nav_create: "Crear kits"
 nav_recover: "Recuperar"
 toc_title: "Contenido"
 footer_source: "Código Fuente"
-footer_download: "Descargar CLI"
+footer_download: "Descargar"
 footer_home: "Inicio"
 ---
 
@@ -57,7 +57,7 @@ Tres pasos. Todo ocurre en tu navegador — tus archivos nunca salen de tu dispo
 Agrega a las personas que guardarán partes de tu clave de recuperación. Para cada una, indica un nombre y opcionalmente información de contacto.
 
 <figure class="screenshot">
-<img src="screenshots/friends.png" alt="Agregando amigos en el Paso 1" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Captura de pantalla: Formulario para agregar amigos</div>'">
+<img src="screenshots/es/friends.png" alt="Agregando amigos en el Paso 1">
 <figcaption>Cada persona aquí guardará una parte de la clave</figcaption>
 </figure>
 
@@ -78,7 +78,7 @@ Lo suficientemente alto para que la colusión sea improbable. Lo suficientemente
 Arrastra y suelta los archivos o la carpeta que quieres proteger.
 
 <figure class="screenshot">
-<img src="screenshots/files.png" alt="Agregando archivos en el Paso 2" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Captura de pantalla: Área de carga de archivos</div>'">
+<img src="screenshots/es/files.png" alt="Agregando archivos en el Paso 2">
 <figcaption>Agrega los archivos que quieres proteger</figcaption>
 </figure>
 
@@ -100,7 +100,7 @@ Arrastra y suelta los archivos o la carpeta que quieres proteger.
 Haz clic en "Generar kits" para cifrar tus archivos y crear un kit para cada persona.
 
 <figure class="screenshot">
-<img src="screenshots/bundles.png" alt="Generando kits en el Paso 3" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Captura de pantalla: Generación de kits</div>'">
+<img src="screenshots/es/bundles.png" alt="Generando kits en el Paso 3">
 <figcaption>Descarga cada kit, o todos a la vez</figcaption>
 </figure>
 
@@ -208,12 +208,12 @@ El camino más sencillo. Si tienes el ZIP del kit (o los archivos que contiene):
 </div>
 
 <figure class="screenshot">
-<img src="screenshots/recovery-1.png" alt="Interfaz de recuperación - recolectando partes" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Captura de pantalla: Proceso de recuperación</div>'">
+<img src="screenshots/es/recovery-1.png" alt="Interfaz de recuperación - recolectando partes">
 <figcaption>La herramienta de recuperación mostrando las partes recolectadas y la lista de contactos</figcaption>
 </figure>
 
 <figure class="screenshot">
-<img src="screenshots/recovery-2.png" alt="Interfaz de recuperación - descifrado completo" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Captura de pantalla: Recuperación completa</div>'">
+<img src="screenshots/es/recovery-2.png" alt="Interfaz de recuperación - descifrado completo">
 <figcaption>Cuando se alcanza el umbral, los archivos se descifran y están listos para descargar</figcaption>
 </figure>
 
@@ -238,12 +238,12 @@ Cada PDF impreso incluye tu parte como una lista de palabras numeradas. Escríbe
 </div>
 
 <figure class="screenshot">
-<img src="screenshots/recovery-words-typing.png" alt="Escribiendo palabras de recuperación desde un PDF impreso en la herramienta" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Captura de pantalla: Escribiendo palabras de recuperación desde un PDF impreso en la herramienta</div>'">
+<img src="screenshots/es/recovery-words-typing.png" alt="Escribiendo palabras de recuperación desde un PDF impreso en la herramienta">
 <figcaption>Escribe las palabras numeradas de tu PDF impreso en el campo de texto</figcaption>
 </figure>
 
 <figure class="screenshot">
-<img src="screenshots/recovery-words-recognized.png" alt="Herramienta de recuperación después de ingresar las palabras, mostrando que la parte fue reconocida" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Captura de pantalla: Herramienta de recuperación después de ingresar las palabras, mostrando que la parte fue reconocida</div>'">
+<img src="screenshots/es/recovery-words-recognized.png" alt="Herramienta de recuperación después de ingresar las palabras, mostrando que la parte fue reconocida">
 <figcaption>La herramienta reconoce las palabras y carga tu parte</figcaption>
 </figure>
 
@@ -288,12 +288,12 @@ Si tu dispositivo tiene cámara, escanea el código QR del PDF para importar tu 
 </div>
 
 <figure class="screenshot">
-<img src="screenshots/qr-camera-permission.png" alt="El navegador pide permiso para usar la cámara" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Captura de pantalla: El navegador pide permiso para usar la cámara</div>'">
+<img src="screenshots/qr-camera-permission.png" alt="El navegador pide permiso para usar la cámara">
 <figcaption>Tu navegador pedirá permiso para usar la cámara</figcaption>
 </figure>
 
 <figure class="screenshot">
-<img src="screenshots/qr-scanning.png" alt="Escaneando un código QR desde un PDF impreso" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Captura de pantalla: Escaneando código QR desde un PDF impreso</div>'">
+<img src="screenshots/qr-scanning.png" alt="Escaneando un código QR desde un PDF impreso">
 <figcaption>Apunta tu cámara al código QR del PDF impreso para importar la parte</figcaption>
 </figure>
 
@@ -306,7 +306,7 @@ Si tu dispositivo tiene cámara, escanea el código QR del PDF para importar tu 
 </div>
 
 <figure class="screenshot">
-<img src="screenshots/manifest-file-picker.png" alt="Seleccionando MANIFEST.age desde una carpeta" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Captura de pantalla: Seleccionando MANIFEST.age desde una carpeta</div>'">
+<img src="screenshots/manifest-file-picker.png" alt="Seleccionando MANIFEST.age desde una carpeta">
 <figcaption>Selecciona el archivo MANIFEST.age de donde lo guardaste</figcaption>
 </figure>
 
@@ -520,17 +520,17 @@ Cada persona puede recibir su kit en su idioma preferido. Está disponible en si
 - Cualquiera puede cambiar de idioma en cualquier momento
 
 <figure class="screenshot">
-<img src="screenshots/multilingual-language-dropdown.png" alt="Entrada de amigo mostrando el menú desplegable de idioma del kit en la interfaz web" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Captura de pantalla: Entrada de amigo mostrando el menú desplegable de idioma del kit en la interfaz web</div>'">
+<img src="screenshots/es/multilingual-language-dropdown.png" alt="Entrada de amigo mostrando el menú desplegable de idioma del kit en la interfaz web">
 <figcaption>Cada amigo tiene un menú desplegable de idioma para configurar el idioma de su kit</figcaption>
 </figure>
 
 <figure class="screenshot">
-<img src="screenshots/demo-pdf/page-1.png" alt="README.pdf abierto en inglés" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Captura de pantalla: README.pdf en otro idioma (por ejemplo, inglés)</div>'">
+<img src="screenshots/demo-pdf/page-1.png" alt="README.pdf abierto en inglés">
 <figcaption>La herramienta de recuperación se abre en el idioma seleccionado del amigo</figcaption>
 </figure>
 
 <figure class="screenshot">
-<img src="screenshots/demo-pdf/page-2.png" alt="README.pdf abierto en inglés" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Captura de pantalla: README.pdf en otro idioma (por ejemplo, inglés)</div>'">
+<img src="screenshots/demo-pdf/page-2.png" alt="README.pdf abierto en inglés">
 <figcaption>Las listas de palabras también están traducidas (ambos idiomas funcionan)</figcaption>
 </figure>
 
@@ -542,9 +542,19 @@ Puedes establecer un periodo de espera al crear los kits. Incluso si tus amigos 
 
 En el [creador de kits](maker.html), cambia al modo **Avanzado** y marca **Agregar un bloqueo por fecha**. Elige cuánto tiempo deben permanecer bloqueados los archivos.
 
+<figure class="screenshot">
+<img src="screenshots/es/tlock-setup.png" alt="Configuración del bloqueo por fecha en modo Avanzado">
+<figcaption>La opción de bloqueo por fecha aparece en el modo Avanzado</figcaption>
+</figure>
+
 ### Recuperación
 
 Cuando alguien abre un kit con bloqueo por fecha antes de la fecha indicada, la herramienta de recuperación muestra un aviso de espera. Cuando el tiempo pasa, la recuperación continúa normalmente.
+
+<figure class="screenshot">
+<img src="screenshots/es/tlock-waiting.png" alt="Herramienta de recuperación mostrando un aviso de bloqueo por fecha">
+<figcaption>La herramienta de recuperación espera hasta que el bloqueo por fecha expire</figcaption>
+</figure>
 
 Abrir un archivo con bloqueo por fecha requiere una breve conexión a internet. Tus archivos no se envían a ningún lado — la conexión verifica que ha pasado suficiente tiempo. Sin el bloqueo por fecha, la recuperación es completamente sin conexión.
 

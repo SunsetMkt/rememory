@@ -95,7 +95,7 @@ declare let currentLang: string;
     bundlesList: HTMLElement | null;
     downloadAllSection: HTMLElement | null;
     downloadAllBtn: HTMLButtonElement | null;
-    downloadYamlBtn: HTMLButtonElement | null;
+    downloadYamlBtn: HTMLElement | null;
   }
 
   // DOM elements
@@ -128,7 +128,7 @@ declare let currentLang: string;
     bundlesList: document.getElementById('bundles-list'),
     downloadAllSection: document.getElementById('download-all-section'),
     downloadAllBtn: document.getElementById('download-all-btn') as HTMLButtonElement | null,
-    downloadYamlBtn: document.getElementById('download-yaml-btn') as HTMLButtonElement | null
+    downloadYamlBtn: document.getElementById('download-yaml-btn')
   };
 
   // ============================================
@@ -621,7 +621,10 @@ declare let currentLang: string;
   function setupGenerate(): void {
     elements.generateBtn?.addEventListener('click', generateBundles);
     elements.downloadAllBtn?.addEventListener('click', downloadAllBundles);
-    elements.downloadYamlBtn?.addEventListener('click', downloadProjectYaml);
+    elements.downloadYamlBtn?.addEventListener('click', (e) => {
+      e.preventDefault();
+      downloadProjectYaml();
+    });
   }
 
   // ============================================
@@ -795,7 +798,10 @@ declare let currentLang: string;
     state.generationComplete = false;
     state.bundles = [];
 
-    if (elements.generateBtn) elements.generateBtn.disabled = true;
+    if (elements.generateBtn) {
+      elements.generateBtn.disabled = true;
+      elements.generateBtn.classList.replace('btn-secondary', 'btn-primary');
+    }
     elements.progressBar?.classList.remove('hidden');
     elements.bundlesList?.classList.add('hidden');
     elements.downloadAllSection?.classList.add('hidden');
@@ -895,6 +901,9 @@ declare let currentLang: string;
       setProgress(100);
       setStatus(t('complete'), 'success');
       state.generationComplete = true;
+      if (elements.generateBtn) {
+        elements.generateBtn.classList.replace('btn-primary', 'btn-secondary');
+      }
 
       elements.bundlesList?.classList.remove('hidden');
       elements.downloadAllSection?.classList.remove('hidden');

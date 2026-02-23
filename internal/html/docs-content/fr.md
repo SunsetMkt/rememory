@@ -57,7 +57,7 @@ Trois étapes. Tout se passe dans votre navigateur — vos fichiers ne quittent 
 Ajoutez les personnes qui garderont une part de votre clé de récupération. Pour chacune, indiquez un nom et éventuellement des coordonnées.
 
 <figure class="screenshot">
-<img src="screenshots/friends.png" alt="Ajout d'amis à l'étape 1" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Capture d'écran : Formulaire d'ajout d'amis</div>'">
+<img src="screenshots/fr/friends.png" alt="Ajout d'amis à l'étape 1">
 <figcaption>Chaque personne ici gardera une part de la clé</figcaption>
 </figure>
 
@@ -78,7 +78,7 @@ Assez élevé pour que la collusion soit improbable. Assez bas pour que la récu
 Glissez-déposez les fichiers ou le dossier que vous souhaitez protéger.
 
 <figure class="screenshot">
-<img src="screenshots/files.png" alt="Ajout de fichiers à l'étape 2" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Capture d'écran : Zone de téléchargement des fichiers</div>'">
+<img src="screenshots/fr/files.png" alt="Ajout de fichiers à l'étape 2">
 <figcaption>Ajoutez les fichiers que vous souhaitez protéger</figcaption>
 </figure>
 
@@ -100,7 +100,7 @@ Glissez-déposez les fichiers ou le dossier que vous souhaitez protéger.
 Cliquez sur « Créer les enveloppes » pour chiffrer vos fichiers et créer une enveloppe pour chaque personne.
 
 <figure class="screenshot">
-<img src="screenshots/bundles.png" alt="Génération des enveloppes à l'étape 3" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Capture d'écran : Génération des enveloppes</div>'">
+<img src="screenshots/fr/bundles.png" alt="Génération des enveloppes à l'étape 3">
 <figcaption>Téléchargez chaque enveloppe séparément, ou toutes à la fois</figcaption>
 </figure>
 
@@ -208,12 +208,12 @@ Le chemin le plus simple. Si vous avez le ZIP de l'enveloppe (ou les fichiers qu
 </div>
 
 <figure class="screenshot">
-<img src="screenshots/recovery-1.png" alt="Interface de récupération - collecte des parts" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Capture d'écran : Processus de récupération</div>'">
+<img src="screenshots/fr/recovery-1.png" alt="Interface de récupération - collecte des parts">
 <figcaption>L'outil de récupération montrant les parts collectées et la liste de contacts</figcaption>
 </figure>
 
 <figure class="screenshot">
-<img src="screenshots/recovery-2.png" alt="Interface de récupération - déchiffrement terminé" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Capture d'écran : Récupération terminée</div>'">
+<img src="screenshots/fr/recovery-2.png" alt="Interface de récupération - déchiffrement terminé">
 <figcaption>Quand le seuil est atteint, les fichiers sont déchiffrés et prêts à télécharger</figcaption>
 </figure>
 
@@ -238,12 +238,12 @@ Chaque PDF imprimé contient votre part sous forme de mots numérotés. Saisisse
 </div>
 
 <figure class="screenshot">
-<img src="screenshots/recovery-words-typing.png" alt="Saisie des mots de récupération depuis un PDF imprimé" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Capture d'écran : Saisie des mots de récupération</div>'">
+<img src="screenshots/fr/recovery-words-typing.png" alt="Saisie des mots de récupération depuis un PDF imprimé">
 <figcaption>Tapez les mots numérotés de votre PDF imprimé dans le champ de texte</figcaption>
 </figure>
 
 <figure class="screenshot">
-<img src="screenshots/recovery-words-recognized.png" alt="L'outil de récupération après la saisie des mots" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Capture d'écran : Mots reconnus par l'outil</div>'">
+<img src="screenshots/fr/recovery-words-recognized.png" alt="L'outil de récupération après la saisie des mots">
 <figcaption>L'outil reconnaît les mots et charge votre part</figcaption>
 </figure>
 
@@ -288,12 +288,12 @@ Si votre appareil a une caméra, scannez le QR code du PDF pour importer votre p
 </div>
 
 <figure class="screenshot">
-<img src="screenshots/qr-camera-permission.png" alt="Le navigateur demande l'accès à la caméra" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Capture d'écran : Demande d'accès à la caméra</div>'">
+<img src="screenshots/qr-camera-permission.png" alt="Le navigateur demande l'accès à la caméra">
 <figcaption>Votre navigateur demandera l'autorisation d'utiliser la caméra</figcaption>
 </figure>
 
 <figure class="screenshot">
-<img src="screenshots/qr-scanning.png" alt="Scan d'un QR code depuis un PDF imprimé" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Capture d'écran : Scan du QR code</div>'">
+<img src="screenshots/qr-scanning.png" alt="Scan d'un QR code depuis un PDF imprimé">
 <figcaption>Dirigez votre caméra vers le QR code du PDF imprimé pour importer la part</figcaption>
 </figure>
 
@@ -306,7 +306,7 @@ Si votre appareil a une caméra, scannez le QR code du PDF pour importer votre p
 </div>
 
 <figure class="screenshot">
-<img src="screenshots/manifest-file-picker.png" alt="Sélection de MANIFEST.age depuis un dossier" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Capture d'écran : Sélection de MANIFEST.age</div>'">
+<img src="screenshots/manifest-file-picker.png" alt="Sélection de MANIFEST.age depuis un dossier">
 <figcaption>Sélectionnez le fichier MANIFEST.age depuis l'endroit où vous l'avez enregistré</figcaption>
 </figure>
 
@@ -520,17 +520,17 @@ Chaque personne peut recevoir son enveloppe dans la langue de son choix. L'outil
 - Chacun peut changer de langue à tout moment
 
 <figure class="screenshot">
-<img src="screenshots/multilingual-language-dropdown.png" alt="Entrée d'ami montrant le menu déroulant de langue" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Capture d'écran : Menu déroulant de langue pour un ami</div>'">
+<img src="screenshots/fr/multilingual-language-dropdown.png" alt="Entrée d'ami montrant le menu déroulant de langue">
 <figcaption>Chaque ami a un menu déroulant pour choisir la langue de son enveloppe</figcaption>
 </figure>
 
 <figure class="screenshot">
-<img src="screenshots/demo-pdf-es/page-1.png" alt="recover.pdf ouvert en espagnol" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Capture d'écran : Outil de récupération dans une autre langue</div>'">
+<img src="screenshots/demo-pdf-es/page-1.png" alt="recover.pdf ouvert en espagnol">
 <figcaption>L'outil de récupération s'ouvre dans la langue choisie pour l'ami</figcaption>
 </figure>
 
 <figure class="screenshot">
-<img src="screenshots/demo-pdf-es/page-2.png" alt="recover.pdf ouvert en espagnol" onerror="this.parentElement.innerHTML='<div class=\'screenshot-placeholder\'><div class=\'icon\'>📸</div>Capture d'écran : Outil de récupération dans une autre langue</div>'">
+<img src="screenshots/demo-pdf-es/page-2.png" alt="recover.pdf ouvert en espagnol">
 <figcaption>Les listes de mots sont aussi traduites (les deux langues fonctionnent)</figcaption>
 </figure>
 
@@ -542,9 +542,19 @@ Vous pouvez définir un délai d'attente lors de la création des enveloppes. M�
 
 Dans le [créateur d'enveloppes](maker.html), passez en mode **Avancé** et cochez **Ajouter un verrou temporel**. Choisissez combien de temps les fichiers doivent rester verrouillés.
 
+<figure class="screenshot">
+<img src="screenshots/fr/tlock-setup.png" alt="Configuration du verrouillage temporel en mode Avancé">
+<figcaption>L'option de verrouillage temporel apparaît en mode Avancé</figcaption>
+</figure>
+
 ### Récupération
 
 Quand quelqu'un ouvre une enveloppe avec verrouillage temporel avant la date prévue, l'outil de récupération affiche un message d'attente. Une fois le délai écoulé, la récupération reprend normalement.
+
+<figure class="screenshot">
+<img src="screenshots/fr/tlock-waiting.png" alt="Outil de récupération affichant un message de verrouillage temporel">
+<figcaption>L'outil de récupération attend que le verrouillage temporel expire</figcaption>
+</figure>
 
 Ouvrir une archive avec verrouillage temporel nécessite une brève connexion internet. Vos fichiers ne sont envoyés nulle part — la connexion sert à vérifier que suffisamment de temps s'est écoulé. Sans verrouillage temporel, la récupération est entièrement hors ligne.
 

@@ -126,6 +126,7 @@ jobs:
             dist/recover.html \
             dist/rememory.rb \
             --generate-notes \
+            --notes "**You can use ReMemory without installing anything.** Download \`maker.html\` from the assets below, save it to your desktop, and open it in any browser to create bundles." \
             --draft
           # Publish the release (now it becomes immutable)
           gh release edit ${{ github.ref_name }} --draft=false

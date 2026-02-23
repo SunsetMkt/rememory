@@ -1,4 +1,4 @@
-.PHONY: build test test-tlock test-e2e test-e2e-headed lint clean install wasm ts build-all bump-patch bump-minor bump-major man html serve demo demo-tlock generate-fixtures full update-pdf-png release check-translations
+.PHONY: build test test-tlock test-e2e test-e2e-headed lint clean install wasm ts build-all bump-patch bump-minor bump-major man html serve demo demo-tlock generate-fixtures full update-pdf-png screenshots release check-translations
 
 BINARY := rememory
 VERSION := $(shell git describe --tags --abbrev=0 2>/dev/null || echo "dev")
@@ -176,3 +176,8 @@ update-pdf-png: build
 	pdftoppm -png -r 200 demo-recovery/output/bundles/bundle-alice/README.pdf docs/screenshots/demo-pdf/page
 	pdftoppm -png -r 200 demo-recovery/output/bundles/bundle-camila/LEEME.pdf docs/screenshots/demo-pdf-es/page
 	@echo "Generated PDF page screenshots in docs/screenshots/demo-pdf/ (English) and docs/screenshots/demo-pdf-es/ (Spanish)"
+
+# Generate localized guide screenshots via Playwright (en, es, de, fr)
+screenshots: build
+	@if [ ! -d node_modules ]; then echo "Run 'npm install' first"; exit 1; fi
+	REMEMORY_BIN=./$(BINARY) npx playwright test e2e/screenshots.spec.ts --project=chromium

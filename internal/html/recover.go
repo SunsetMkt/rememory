@@ -57,7 +57,7 @@ const tlockWaitingHTML = `<style>
 .tlock-waiting-body {
   flex: 1;
 }
-.tlock-waiting-body strong {
+.tlock-waiting-body > strong {
   display: block;
   color: var(--text);
   margin-bottom: 0.25rem;
