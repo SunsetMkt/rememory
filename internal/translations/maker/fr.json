@@ -23,6 +23,7 @@
   "files_drop": "Déposez un dossier ici ou cliquez pour sélectionner des fichiers",
   "files_hint": "Ces fichiers seront protégés et répartis entre vos amis",
   "files_summary": "{0} fichier(s), {1} au total",
+  "files_too_large": "Trop volumineux — la limite est de {0}",
   "step3_title": "Créer les enveloppes",
   "generate_btn": "Créer les enveloppes",
   "download_all_btn": "Télécharger toutes les enveloppes",

@@ -23,6 +23,7 @@
   "files_drop": "Povlecite in spustite mapo ali kliknite za izbiro datotek",
   "files_hint": "Te datoteke bodo šifrirane in razdeljene med vaše prijatelje",
   "files_summary": "{0} datotek, skupaj {1}",
+  "files_too_large": "Preveliko — omejitev je {0}",
   "step3_title": "Ustvari svežnje",
   "generate_btn": "Ustvari svežnje",
   "download_all_btn": "Prenesi vse svežnje",

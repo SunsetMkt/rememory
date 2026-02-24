@@ -23,6 +23,7 @@
   "files_drop": "Arrastra una carpeta aquí o haz clic para seleccionar archivos",
   "files_hint": "Estos archivos serán protegidos y repartidos entre tus amigos",
   "files_summary": "{0} archivo(s), {1} en total",
+  "files_too_large": "Demasiado grande — el límite es {0}",
   "step3_title": "Generar kits",
   "generate_btn": "Generar kits",
   "download_all_btn": "Descargar todos los kits",

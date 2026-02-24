@@ -613,7 +613,15 @@ declare const __SELFHOSTED__: boolean;
 
     elements.filesPreview?.classList.remove('hidden');
     if (elements.filesSummary) {
-      elements.filesSummary.textContent = t('files_summary', state.files.length, formatSize(totalSize));
+      let summaryText = t('files_summary', state.files.length, formatSize(totalSize));
+      const overLimit = totalSize > maxTotalFileSize;
+
+      if (overLimit) {
+        summaryText += ` — ${t('files_too_large', formatSize(maxTotalFileSize))}`;
+      }
+
+      elements.filesSummary.textContent = summaryText;
+      elements.filesSummary.classList.toggle('size-warning', overLimit);
     }
     elements.filesSummary?.classList.remove('hidden');
   }
@@ -703,9 +711,27 @@ declare const __SELFHOSTED__: boolean;
     }
   }
 
+  // Maximum total file size: selfhosted uses the server's configured limit,
+  // standalone uses 1 GB (matches core.MaxTotalSize in Go).
+  const maxTotalFileSize = (__SELFHOSTED__ && window.SELFHOSTED_CONFIG?.maxManifestSize)
+    ? window.SELFHOSTED_CONFIG.maxManifestSize
+    : 1024 * 1024 * 1024;
+
+  function getTotalFileSize(): number {
+    let total = 0;
+    for (const file of state.files) {
+      total += file.data.length;
+    }
+    return total;
+  }
+
+  function isOverSizeLimit(): boolean {
+    return state.files.length > 0 && getTotalFileSize() > maxTotalFileSize;
+  }
+
   function checkGenerateReady(): void {
     if (elements.generateBtn) {
-      elements.generateBtn.disabled = !state.wasmReady || state.generating;
+      elements.generateBtn.disabled = !state.wasmReady || state.generating || isOverSizeLimit();
     }
   }
 
@@ -1110,7 +1136,7 @@ declare const __SELFHOSTED__: boolean;
       if (selfhostedConfig && manifest.length > selfhostedConfig.maxManifestSize) {
         toast.error(
           t('error_title'),
-          `Manifest is too large (${formatSize(manifest.length)}). The server accepts up to ${formatSize(selfhostedConfig.maxManifestSize)}.`,
+          t('files_too_large', formatSize(selfhostedConfig.maxManifestSize)),
         );
         return;
       }

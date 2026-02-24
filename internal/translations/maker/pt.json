@@ -23,6 +23,7 @@
   "files_drop": "Arraste e solte uma pasta aqui ou clique para selecionar arquivos",
   "files_hint": "Estes arquivos serão protegidos e divididos entre seus amigos",
   "files_summary": "{0} arquivo(s), {1} total",
+  "files_too_large": "Grande demais — o limite é {0}",
   "step3_title": "Gerar Pacotes",
   "generate_btn": "Gerar Pacotes",
   "download_all_btn": "Baixar Todos os Pacotes",

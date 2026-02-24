@@ -23,6 +23,7 @@
   "files_drop": "Ziehe einen Ordner hierher oder klicke, um Dateien auszuwählen",
   "files_hint": "Diese Dateien werden geschützt und unter deinen Freunden aufgeteilt",
   "files_summary": "{0} Datei(en), {1} insgesamt",
+  "files_too_large": "Zu groß — Limit ist {0}",
   "step3_title": "Umschläge erstellen",
   "generate_btn": "Umschläge erstellen",
   "download_all_btn": "Alle Umschläge herunterladen",

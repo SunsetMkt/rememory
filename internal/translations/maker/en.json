@@ -23,6 +23,7 @@
   "files_drop": "Drag & drop a folder here, or click to select files",
   "files_hint": "These will be protected and divided among your friends",
   "files_summary": "{0} file(s), {1} total",
+  "files_too_large": "Too large — limit is {0}",
   "step3_title": "Generate Bundles",
   "generate_btn": "Generate Bundles",
   "download_all_btn": "Download All Bundles",
