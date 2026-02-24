@@ -100,8 +100,8 @@ These values apply to the PDF (`internal/pdf/readme.go`), website CSS (`internal
 
 ## Non-goals
 
-- No server-side component.
-- No network calls in the recovery path (exception: tlock-enabled bundles require a drand beacon check).
+- No server-side component required. The optional self-hosted server (`rememory serve`) is a convenience layer — bundles remain self-contained and work without it.
+- No network calls in the recovery path (exception: tlock-enabled bundles require a drand beacon check; the self-hosted recover page fetches the encrypted archive from its own server).
 - No telemetry or analytics.
 - No dependency on external CDNs or remote resources.
 - No runtime dependency on Node/npm for end users or recovery.
@@ -113,7 +113,7 @@ These values apply to the PDF (`internal/pdf/readme.go`), website CSS (`internal
 
 These must not regress. Reference them in reviews.
 
-- `recover.html` must work offline, from a local `file://` open, without installation. Exception: tlock-enabled bundles need a brief internet connection to check the drand beacon at recovery time.
+- `recover.html` must work offline, from a local `file://` open, without installation. Exceptions: tlock-enabled bundles need a brief internet connection to check the drand beacon at recovery time; the self-hosted variant served by `rememory serve` fetches the encrypted archive from its own server, but the standalone `recover.html` in each friend's bundle remains fully offline.
 - Bundles must be self-contained and must not require this repo, any server, or the internet to function. Exception: tlock-enabled bundles need drand beacon access at recovery time only.
 - Below-threshold shares must not leak information about the secret (information-theoretic security). Don't add metadata to shares that could weaken this.
 - Manifest encryption must remain age-based. No custom crypto. Tlock sits inside age as an inner layer (defense in depth).

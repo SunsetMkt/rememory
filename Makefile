@@ -20,8 +20,8 @@ ts:
 	esbuild internal/html/assets/src/tlock-create.ts --bundle --format=iife --outfile=internal/html/assets/tlock-create.js --target=es2020
 	esbuild internal/html/assets/src/tlock-recover.ts --bundle --format=iife --outfile=internal/html/assets/tlock-recover.js --target=es2020
 	@echo "Compiling selfhosted TypeScript variants..."
-	esbuild internal/html/assets/src/app.ts --bundle --format=iife --define:__SELFHOSTED__=true --outfile=internal/html/assets/app-selfhosted.js --target=es2020 --loader:.txt=text --conditions=zbar-inlined
-	esbuild internal/html/assets/src/create-app.ts --bundle --format=iife --define:__SELFHOSTED__=true --outfile=internal/html/assets/create-app-selfhosted.js --target=es2020
+	esbuild internal/html/assets/src/app.ts --bundle --format=iife --define:__SELFHOSTED__=true --minify-syntax --outfile=internal/html/assets/app-selfhosted.js --target=es2020 --loader:.txt=text --conditions=zbar-inlined
+	esbuild internal/html/assets/src/create-app.ts --bundle --format=iife --define:__SELFHOSTED__=true --minify-syntax --outfile=internal/html/assets/create-app-selfhosted.js --target=es2020
 
 # Build WASM module for maker.html (bundle creation tool)
 # Note: recover.html uses native JavaScript crypto, no WASM needed

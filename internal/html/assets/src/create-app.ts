@@ -919,8 +919,7 @@ declare const __SELFHOSTED__: boolean;
       elements.downloadAllSection?.classList.remove('hidden');
 
       if (__SELFHOSTED__) {
-        // Only the encrypted manifest and non-secret metadata.
-        // Bundles (which contain shares) are intentionally excluded.
+        // Upload manifest to server (shares are never sent)
         if (result.manifest && typeof window.rememoryOnBundlesCreated === 'function') {
           window.rememoryOnBundlesCreated(result.manifest, {
             name: state.projectName,
@@ -929,13 +928,11 @@ declare const __SELFHOSTED__: boolean;
           });
         }
 
-        // Hide "Save project.yml" (not useful in selfhosted mode yet)
-        // and add a link to the home page instead.
+        // Replace "Save project.yml" with a home page link
         const nextStepsHint = document.querySelector('.next-steps-hint');
         if (nextStepsHint) {
           const yamlLink = nextStepsHint.querySelector('#download-yaml-btn');
           if (yamlLink) {
-            // Remove the separator before the yaml link and the link itself
             const prev = yamlLink.previousSibling;
             if (prev && prev.nodeType === Node.TEXT_NODE) prev.remove();
             yamlLink.remove();
@@ -1095,6 +1092,9 @@ declare const __SELFHOSTED__: boolean;
 
   // ============================================
   // Selfhosted Server Integration
+  //
+  // Everything inside `if (__SELFHOSTED__)` is eliminated from static builds
+  // by esbuild's dead code removal (--define:__SELFHOSTED__=false --minify-syntax).
   // ============================================
 
   if (__SELFHOSTED__) {

@@ -478,7 +478,7 @@ func createArchiveJS(this js.Value, args []js.Value) any {
 // prepends the metadata envelope when tlock metadata is provided, splits the
 // passphrase via Shamir, and packages personalized bundles.
 // Args: config object with archiveData, projectName, threshold, friends, etc.
-// Returns: { bundles: [...], error: string|null }
+// Returns: { bundles: [...], manifest: Uint8Array, error: string|null }
 func createBundlesFromArchiveJS(this js.Value, args []js.Value) any {
 	if len(args) < 1 {
 		return errorResult("missing config argument")

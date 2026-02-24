@@ -1435,6 +1435,9 @@ type UIShare = ParsedShare & { isHolder?: boolean };
 
   // ============================================
   // Selfhosted Server Integration
+  //
+  // Everything inside `if (__SELFHOSTED__)` is eliminated from static builds
+  // by esbuild's dead code removal (--define:__SELFHOSTED__=false --minify-syntax).
   // ============================================
 
   if (__SELFHOSTED__) {
@@ -1446,13 +1449,15 @@ type UIShare = ParsedShare & { isHolder?: boolean };
     };
   }
 
-  // Global export for HTML templates
+  // ============================================
+  // Global Exports & Startup
+  // ============================================
+
   window.rememoryUpdateUI = function(): void {
     updateSharesUI();
     updateContactList();
   };
 
-  // Start
   document.addEventListener('DOMContentLoaded', async () => {
     await init();
 
