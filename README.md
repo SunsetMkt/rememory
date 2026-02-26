@@ -59,7 +59,7 @@ Everything runs locally. Your files never leave your device.
 
 ![The bundle creator — add friends, add files, generate](docs/screenshots/en/maker-overview.png)
 
-### 💻 CLI
+### 💻 CLI and Docker
 
 For automation, scripting, or if you prefer the terminal.
 
@@ -72,11 +72,18 @@ curl -Lo rememory https://github.com/eljojo/rememory/releases/latest/download/re
 chmod +x rememory
 sudo mv rememory /usr/local/bin/
 
+# Docker (self-hosted)
+docker run -d \
+  --name rememory \
+  -p 8080:8080 \
+  -v rememory-data:/data \
+  ghcr.io/eljojo/rememory:latest
+
 # Nix
 nix run github:eljojo/rememory
 ```
 
-See the **[CLI User Guide](docs/guide.md)** for complete documentation.
+See the **[CLI User Guide](docs/guide.md)** or the **[Self-Hosted Guide](docs/selfhosted.md)** for complete documentation.
 
 ---
 
