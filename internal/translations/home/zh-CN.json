@@ -1,0 +1,9 @@
+{
+  "home_intro": "由你信任的人保护的文件，存放在这里，等待需要时使用。",
+  "home_about_link": "关于 ReMemory",
+  "home_empty": "目前还没有恢复包。",
+  "home_create_bundle": "建立恢复包",
+  "home_admin_password": "管理员密码",
+  "home_enter_password": "请输入管理员密码。",
+  "home_pieces_needed": "需要 {1} 份中的 {0} 份才能恢复"
+}
