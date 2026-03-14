@@ -40,7 +40,7 @@
 
           npmDeps = pkgs.fetchNpmDeps {
             src = ./.;
-            hash = "sha256-xpvOTAZb2lpMQV9IK5yOMqvgJtcPAHspt9OHAufFKtc=";
+            hash = "sha256-Sk6l9zhl23xGKekXnNpuWmg1+ruVDBE0GXrLth9TENo=";
           };
 
           # Patch go.mod to match nixpkgs Go version (nixpkgs may lag behind)
