@@ -76,7 +76,7 @@ func ArchiveTarGz(w io.Writer, sourceDir string) (*ArchiveResult, error) {
 			return fmt.Errorf("creating header for %s: %w", path, err)
 		}
 
-		header.Name = relPath
+		header.Name = filepath.ToSlash(relPath)
 
 		// Ensure directory entries end with /
 		if info.IsDir() {
@@ -174,7 +174,7 @@ func ExtractTarGz(r io.Reader, destDir string) (*ExtractResult, error) {
 		}
 
 		// Track the root directory
-		parts := strings.Split(header.Name, string(filepath.Separator))
+		parts := strings.Split(header.Name, "/")
 		if len(parts) > 0 && rootDir == "" {
 			rootDir = parts[0]
 		}
@@ -319,7 +319,7 @@ func ArchiveZip(w io.Writer, sourceDir string) (*ArchiveResult, error) {
 		}
 
 		// Ensure directory entries end with /
-		name := relPath
+		name := filepath.ToSlash(relPath)
 		if info.IsDir() {
 			name += "/"
 		}
