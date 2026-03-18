@@ -1,0 +1,10 @@
+{
+  "title": "ReMemory",
+  "home_intro":"Güvendiğiniz kişiler tarafından korunan dosyalar, ihtiyaç duyulana kadar burada saklanır.",
+  "home_about_link": "ReMemory Hakkında",
+  "home_empty": "Henüz burada paket yok.",
+  "home_create_bundle": "Paket oluştur",
+  "home_admin_password": "Admin parolası",
+  "home_enter_password": "Admin parolasını girin.",
+  "home_pieces_needed": "{1} parçanın {0} tanesi kurtarma için gerekli"
+}

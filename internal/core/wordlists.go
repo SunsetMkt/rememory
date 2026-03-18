@@ -27,11 +27,12 @@ const (
 	LangPT    Lang = "pt"
 	LangZH_TW Lang = "zh-TW"
 	LangCA    Lang = "ca"
+	LangTR    Lang = "tr"
 )
 
 // AllLangs returns all supported word list languages.
 func AllLangs() []Lang {
-	return []Lang{LangEN, LangES, LangFR, LangDE, LangSL, LangPT, LangZH_TW, LangCA}
+	return []Lang{LangEN, LangES, LangFR, LangDE, LangSL, LangPT, LangZH_TW, LangCA, LangTR}
 }
 
 // WordListInfo describes a BIP39 word list: its source, expected hash, and words.
@@ -57,6 +58,8 @@ type wordListSpec struct {
 // Slovenian: https://github.com/StellarStoic/BIP39_Exotica (unofficial)
 // Catalan source: https://github.com/1ma/diceware-cat/blob/master/cat-wordlist-ascii.txt
 // Used as source to generate a BIP39-compatible Catalan list.
+// Turkish source: https://github.com/FrustT/BIP39_TR (unofficial)
+
 var wordListSpecs = []wordListSpec{
 	{LangEN, "wordlists/english.txt", "https://github.com/bitcoin/bips/blob/ed7af6ae7e80c90bcfc69b3936073505e2fc2503/bip-0039/english.txt", "2f5eed53a4727b4bf8880d8f3f199efc90e58503646d9ff8eff3a2ed3b24dbda"},
 	{LangES, "wordlists/spanish.txt", "https://github.com/bitcoin/bips/blob/ed7af6ae7e80c90bcfc69b3936073505e2fc2503/bip-0039/spanish.txt", "46846a5a0139d1e3cb77293e521c2865f7bcdb82c44e8d0a06a2cd0ecba48c0b"},
@@ -66,6 +69,7 @@ var wordListSpecs = []wordListSpec{
 	{LangPT, "wordlists/portuguese.txt", "https://github.com/bitcoin/bips/blob/ed7af6ae7e80c90bcfc69b3936073505e2fc2503/bip-0039/portuguese.txt", "2685e9c194c82ae67e10ba59d9ea5345a23dc093e92276fc5361f6667d79cd3f"},
 	{LangZH_TW, "wordlists/chinese_traditional.txt", "https://github.com/bitcoin/bips/blob/7d77befd2b14359b9386fc1f9fb15f82d418fb34/bip-0039/chinese_traditional.txt", "417b26b3d8500a4ae3d59717d7011952db6fc2fb84b807f3f94ac734e89c1b5f"},
 	{LangCA, "wordlists/catalan.txt", "https://github.com/1ma/diceware-cat/blob/master/cat-wordlist-ascii.txt", "be159d519390a5de8d9fb90421ea758643ddfb69f439651f5d81c10910151e56"},
+	{LangTR, "wordlists/turkish.txt", "https://github.com/FrustT/BIP39_TR/blob/main/bip39_turkish.txt", "627be6b5f48248123db6a989ed46d62b9d74c74ac70acb5916bfce2410628fc8"},
 }
 
 var (

@@ -1,0 +1,17 @@
+{
+  "loading": "Yükleniyor...",
+  "nav_about": "Hakkında",
+  "nav_create": "Paket Oluştur",
+  "nav_guide": "Rehber",
+  "nav_recover": "Kurtar",
+  "error": "Hata: {0}",
+  "error_title": "Bir şeyler yanlış gitti",
+  "error_not_ready_title": "Henüz hazır değil",
+  "error_not_ready_guidance": "Lütfen biraz bekleyin, sonra tekrar deneyin.",
+  "action_try_again": "Tekrar dene",
+  "remove": "Kaldır",
+  "confirm": "Onayla",
+  "delete": "Sil",
+  "deleting": "Siliniyor...",
+  "delete_failed": "Silme başarısız."
+}
