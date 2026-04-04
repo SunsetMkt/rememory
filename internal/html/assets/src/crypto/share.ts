@@ -53,6 +53,12 @@ export async function parseShare(content: string): Promise<ParsedShare> {
         const key = trimmed.slice(0, colonIdx).trim();
         const value = trimmed.slice(colonIdx + 1).trim();
         headers[key] = value;
+      } else {
+        // Line doesn't look like a header - must be base64 data.
+        // This handles cases where the empty line separator is missing,
+        // e.g. when copying share text from a PDF viewer.
+        inData = true;
+        dataLines.push(trimmed);
       }
     } else {
       dataLines.push(trimmed);
