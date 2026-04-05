@@ -1,0 +1,17 @@
+{
+  "loading": "加载中……",
+  "nav_about": "关于",
+  "nav_create": "创建恢复包",
+  "nav_guide": "指南",
+  "nav_recover": "恢复",
+  "error": "错误：{0}",
+  "error_title": "出了点问题",
+  "error_not_ready_title": "还没准备好",
+  "error_not_ready_guidance": "请稍等片刻，然后重试。",
+  "action_try_again": "再试一次",
+  "remove": "移除",
+  "confirm": "确认",
+  "delete": "删除",
+  "deleting": "正在删除……",
+  "delete_failed": "删除失败。"
+}
