@@ -98,5 +98,5 @@
   "verification_threshold": "At least {0} pieces are needed for recovery.",
   "verification_manifest_ok": "Encrypted archive is pre-loaded.",
   "verification_manifest_missing": "The encrypted archive will need to be provided during recovery.",
-  "verification_keep_safe": "Keep this bundle somewhere safe. When recovery is needed, contact the people listed below."
+  "verification_keep_safe": "Keep this bundle somewhere safe. When the time comes, you and the others will combine your pieces to recover."
 }

@@ -1162,6 +1162,8 @@ type UIShare = ParsedShare & { isHolder?: boolean };
       const clearBtn = elements.manifestStatus.querySelector('.clear-manifest');
       clearBtn?.addEventListener('click', clearManifest);
     }
+
+    updateVerificationStatus();
   }
 
   function clearManifest(): void {
@@ -1171,6 +1173,7 @@ type UIShare = ParsedShare & { isHolder?: boolean };
     elements.manifestStatus?.classList.remove('loaded');
     elements.manifestDropZone?.classList.remove('hidden');
     checkRecoverReady();
+    updateVerificationStatus();
   }
 
   // ============================================
