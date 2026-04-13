@@ -4,6 +4,8 @@ All notable changes to ReMemory are documented here.
 
 ## Unreleased
 
+## v0.0.20 — 2026-04-13
+
 - **Bundle verification** — When a friend opens their bundle with just their own piece, a card now confirms everything is working: which piece they hold, how many are needed, and whether the encrypted archive is included. A small reassurance that their bundle is ready for when it matters. Thanks @tmchow!
 - **Simplified Chinese support** — Added Simplified Chinese (zh-CN) across the recovery tool, maker, bundle instructions, and landing page. Thanks @gabrnavarro!
 - **Improved Turkish wordlist** — Updated the Turkish BIP39 word list with corrections. Thanks @FrustT!
