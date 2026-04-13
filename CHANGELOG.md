@@ -4,11 +4,17 @@ All notable changes to ReMemory are documented here.
 
 ## Unreleased
 
+- **Bundle verification** — When a friend opens their bundle with just their own piece, a card now confirms everything is working: which piece they hold, how many are needed, and whether the encrypted archive is included. A small reassurance that their bundle is ready for when it matters. Thanks @tmchow!
+- **Simplified Chinese support** — Added Simplified Chinese (zh-CN) across the recovery tool, maker, bundle instructions, and landing page. Thanks @gabrnavarro!
+- **Improved Turkish wordlist** — Updated the Turkish BIP39 word list with corrections. Thanks @FrustT!
+- **Pasted share fix** — Shares copied from PDFs now work reliably. Some PDF viewers strip a blank line that the recovery tool expected, causing pasted shares to be silently ignored. Thanks @tmchow!
+- **Italian translation fixes** — Corrected typos in the Italian translations. Thanks @xushidev!
+
 ## v0.0.19 — 2026-03-18
 
 - **Turkish language support** — Added Turkish as a supported language. Thanks @FrustT!
-- **Bundles now work across operating systems** — Archives created on Windows now extract correctly everywhere, and vice versa.
-- **Docker security** — The Docker image now runs as a non-root user.
+- **Bundles now work across operating systems** — Archives created on Windows now extract correctly everywhere, and vice versa. Thanks @vnykmshr!
+- **Docker security** — The Docker image now runs as a non-root user. Thanks @vnykmshr!
 
 ## v0.0.18 — 2026-03-16
 
@@ -48,16 +54,16 @@ All notable changes to ReMemory are documented here.
 - **PDF import in recovery** — PDFs from bundles now contain a machine-readable share appended to the file. You can drop a PDF directly into the recovery tool instead of typing or scanning — it just works.
 - **QR scanning on more browsers** — Added a polyfill for browsers that don't support the BarcodeDetector API, so QR code scanning works in more places.
 - **Tappable email addresses** — Email addresses in the contact list are now `mailto:` links, so you can tap them on a phone instead of copying and pasting. Thanks @vnykmshr!
-- **Accessibility improvements** — Keyboard users can now see where they are when tabbing through the recovery tool (focus indicators). Improved contrast for muted text to meet WCAG AA. Added ARIA attributes for screen readers.
-- **Safer sealing** — Running `seal` on a project where you haven't added any files to the manifest (only the template README) now gives a clear error instead of creating a useless encrypted bundle.
+- **Accessibility improvements** — Keyboard users can now see where they are when tabbing through the recovery tool (focus indicators). Improved contrast for muted text to meet WCAG AA. Added ARIA attributes for screen readers. Thanks @vnykmshr!
+- **Safer sealing** — Running `seal` on a project where you haven't added any files to the manifest (only the template README) now gives a clear error instead of creating a useless encrypted bundle. Thanks @vnykmshr!
 - **Better drop zones** — Improved the look and behavior of file drop areas in the recovery tool.
-- **Language detection fix** — Regional browser locales (like `en-GB` or `es-MX`) are now detected correctly instead of falling back to English.
+- **Language detection fix** — Regional browser locales (like `en-GB` or `es-MX`) are now detected correctly instead of falling back to English. Thanks @vnykmshr!
 - **Updated Slovenian translations** — Thanks @h200101!
 
 ## v0.0.12 — 2026-02-13
 
 - **Chinese (Traditional) support** — Added zh-TW as a seventh language for the recovery tool, maker, and bundle instructions. Thank you @JasonHK!
-- **Portuguese translations** — Added Portuguese as a sixth supported language.
+- **Portuguese translations** — Added Portuguese as a sixth supported language. Thanks @Kasama!
 - **Language picker** — Both the recovery tool and maker now have a language switcher, so people can choose their language themselves.
 - **Named and anonymous toggle in maker** — The maker UI now has a clear selector for choosing between named and anonymous bundles, instead of burying the option.
 - **Security hardening** — Added Content Security Policy headers to prevent XSS. Added size limits to ZIP extraction in the browser path (thanks @vnykmshr). Applied additional safety validations from a [security review](docs/security-review.md).
@@ -98,7 +104,7 @@ The biggest release so far — a new protocol version, word-based shares, QR cod
 ## v0.0.7 — 2026-02-08
 
 - **Slovenian language support** — Added Slovenian as a fifth supported language for the recovery UI and instructions. Thanks to @h200101!
-- **Unicode name fix** — Fixed an issue where non-ASCII characters in friend names (accents, umlauts, etc.) could cause problems when creating bundle folders.
+- **Unicode name fix** — Fixed an issue where non-ASCII characters in friend names (accents, umlauts, etc.) could cause problems when creating bundle folders. Thanks @h200101!
 - **Path traversal protection** — Hardened tar.gz extraction against directory traversal attacks. Thanks to @vnykmshr!
 
 ## v0.0.6 — 2026-02-05
