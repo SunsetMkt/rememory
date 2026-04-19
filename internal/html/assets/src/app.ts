@@ -335,7 +335,14 @@ type UIShare = ParsedShare & { isHolder?: boolean };
         updateSharesUI();
         updateContactList();
       } catch {
-        // Silently ignore invalid holder share
+        // Surface corrupt pre-loaded holder share instead of silently ignoring it.
+        showError(
+          t('error_preloaded_share_message'),
+          {
+            title: t('error_preloaded_share_title'),
+            guidance: t('error_preloaded_share_guidance'),
+          }
+        );
       }
     }
 
