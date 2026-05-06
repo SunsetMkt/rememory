@@ -22,7 +22,7 @@ require (
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
 	github.com/cpuguy83/go-md2man/v2 v2.0.7 // indirect
-	github.com/drand/go-clients v0.2.0 // indirect
+	github.com/drand/go-clients v0.2.3 // indirect
 	github.com/drand/kyber-bls12381 v0.3.4 // indirect
 	github.com/hashicorp/errwrap v1.1.0 // indirect
 	github.com/hashicorp/go-multierror v1.1.1 // indirect
@@ -36,16 +36,16 @@ require (
 	github.com/prometheus/common v0.67.5 // indirect
 	github.com/prometheus/procfs v0.20.1 // indirect
 	github.com/russross/blackfriday/v2 v2.1.0 // indirect
-	github.com/spf13/pflag v1.0.9 // indirect
+	github.com/spf13/pflag v1.0.10 // indirect
 	go.dedis.ch/fixbuf v1.0.3 // indirect
 	go.uber.org/multierr v1.11.0 // indirect
-	go.uber.org/zap v1.27.1 // indirect
+	go.uber.org/zap v1.28.0 // indirect
 	go.yaml.in/yaml/v2 v2.4.4 // indirect
 	go.yaml.in/yaml/v3 v3.0.4 // indirect
-	golang.org/x/crypto v0.49.0 // indirect
-	golang.org/x/net v0.52.0 // indirect
-	golang.org/x/sys v0.42.0 // indirect
-	google.golang.org/genproto/googleapis/rpc v0.0.0-20260319201613-d00831a3d3e7 // indirect
-	google.golang.org/grpc v1.79.3 // indirect
+	golang.org/x/crypto v0.50.0 // indirect
+	golang.org/x/net v0.53.0 // indirect
+	golang.org/x/sys v0.43.0 // indirect
+	google.golang.org/genproto/googleapis/rpc v0.0.0-20260504160031-60b97b32f348 // indirect
+	google.golang.org/grpc v1.81.0 // indirect
 	google.golang.org/protobuf v1.36.11 // indirect
 )
