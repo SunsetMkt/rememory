@@ -36,7 +36,7 @@
           version = versionFile;
           src = ./.;
 
-          vendorHash = "sha256-XR3XoBcyEou/L3QXGBUl8IS1u0lpEBS+GTrD574OWh8=";
+          vendorHash = "sha256-n7+br/re7BeR+zStfxkyJM2bZuKVrNvoYvCNeXResBs=";
           proxyVendor = true;
 
           overrideModAttrs = old: {
@@ -82,7 +82,7 @@
             version = versionFile;
             src = ./.;
 
-            vendorHash = "sha256-XR3XoBcyEou/L3QXGBUl8IS1u0lpEBS+GTrD574OWh8=";
+            vendorHash = "sha256-n7+br/re7BeR+zStfxkyJM2bZuKVrNvoYvCNeXResBs=";
             proxyVendor = true; # Download deps during build instead of vendoring
 
             # The go-modules derivation only fetches Go deps — skip TS/WASM build there
